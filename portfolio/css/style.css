@@ -1,0 +1,967 @@
+
+/* ==========================================
+   1. PALETA DE COLORES
+   ========================================== */
+
+:root {
+    --pink: #e8b9bd;
+    --light-pink: #f0d6d4;
+    --cream: #f7f0dc;
+    --parchment: #ead8bd;
+    --rose: #dba2a7;
+    --sage: #a4a48a;
+    --olive: #86785b;
+    --wood: #98745c;
+    --dark-wood: #493426;
+    --ink: #49382f;
+    --white: #fffaf2;
+}
+
+
+/* ==========================================
+   2. CONFIGURACIÓN GENERAL
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+
+    /* Fondo tartán */
+    background-color: var(--pink);
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 32px,
+            #f7f0dc 32px,
+            #f7f0dc 43px,
+            transparent 43px,
+            transparent 58px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 32px,
+            #f7f0dc 32px,
+            #f7f0dc 43px,
+            transparent 43px,
+            transparent 58px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 65px,
+            #987966 65px,
+            #987966 81px,
+            transparent 81px,
+            transparent 105px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 65px,
+            #987966 65px,
+            #987966 81px,
+            transparent 81px,
+            transparent 105px
+        ),
+        repeating-linear-gradient(
+            45deg,
+            transparent 0px,
+            transparent 5px,
+            #98796645 5px,
+            #98796645 7px,
+            transparent 7px,
+            transparent 11px
+        );
+
+    background-attachment: fixed;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+
+/* ==========================================
+   3. CABECERA
+   ========================================== */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 20px 5%;
+
+    background-color: var(--dark-wood);
+    color: var(--cream);
+
+    border-bottom: 4px solid var(--wood);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+/* Navegación con estilo de etiquetas */
+
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+
+.main-nav a {
+  display: inline-block;
+  padding: 9px 16px;
+  background-color: #f7f0dc;
+  color: #493426;
+  border: 2px solid #98745c;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  box-shadow: 2px 3px 0 #dba2a7;
+  transition: all 0.2s ease;
+}
+
+.main-nav a:hover {
+  background-color: #e8b9bd;
+  color: #493426;
+  transform: translateY(-2px);
+  box-shadow: 3px 5px 0 #98745c;
+}
+
+
+/* Selector de idiomas */
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.language-switch a {
+    padding: 4px 6px;
+
+    color: var(--cream);
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.language-switch a:hover,
+.language-switch a[aria-current="page"] {
+    color: var(--dark-wood);
+    background-color: var(--parchment);
+}
+
+
+/* ==========================================
+   4. PORTADA PRINCIPAL
+   ========================================== */
+
+.library-hero {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 65px 6% 45px;
+    text-align: center;
+
+    background-color: transparent;
+}
+
+/* Letrero principal */
+
+.hero-sign {
+    position: relative;
+
+    width: min(90%, 850px);
+    margin-bottom: 28px;
+    padding: 30px 40px;
+
+    color: var(--dark-wood);
+    background-color: var(--parchment);
+
+    border: 3px solid var(--wood);
+    border-radius: 10px;
+
+    box-shadow:
+        5px 5px 0 #49342620,
+        inset 0 0 0 5px #ead8bd;
+}
+
+/* Adornos laterales */
+
+.hero-sign::before,
+.hero-sign::after {
+    content: "✦";
+
+    position: absolute;
+    top: 50%;
+
+    color: var(--olive);
+    font-size: 22px;
+
+    transform: translateY(-50%);
+}
+
+.hero-sign::before {
+    left: 18px;
+}
+
+.hero-sign::after {
+    right: 18px;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+
+    color: var(--olive);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero-sign .eyebrow {
+    margin-bottom: 8px;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+}
+
+.library-hero h1 {
+    margin-bottom: 10px;
+
+    color: var(--dark-wood);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: normal;
+    line-height: 1.15;
+}
+
+.hero-subtitle {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+
+/* ==========================================
+   5. IMAGEN DE LA BIBLIOTECA
+   ========================================== */
+
+.hero-art {
+    width: 75%;
+    max-width: 850px;
+
+    margin: 0 auto;
+    padding: 12px;
+
+    overflow: hidden;
+
+    background-color: var(--cream);
+
+    border: 2px solid var(--wood);
+    border-radius: 10px;
+}
+
+.hero-art img {
+    display: block;
+
+    width: 200%;
+    max-width: 600px;
+    height: auto;
+
+    margin: 0 auto;
+
+    border-radius: 6px;
+}
+
+.image-placeholder {
+    padding: 20px;
+
+    color: var(--olive);
+    font-size: 0.9rem;
+}
+
+/* Enlace para explorar */
+
+.explore-link {
+    display: inline-block;
+
+    margin-top: 28px;
+    padding: 10px 20px;
+
+    color: var(--dark-wood);
+    text-decoration: none;
+
+    background-color: var(--cream);
+
+    border: 1px solid var(--wood);
+    border-radius: 25px;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.explore-link:hover {
+    background-color: var(--parchment);
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   6. SECCIONES DE CONTENIDO
+   ========================================== */
+
+.content-section {
+    width: min(90%, 1100px);
+
+    margin: 35px auto;
+    padding: 65px 8%;
+
+    border: 3px solid var(--wood);
+    border-radius: 10px;
+
+    box-shadow: 5px 7px 0 #49342620;
+}
+
+.content-section h2,
+.garden-entry h2 {
+    color: var(--dark-wood);
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+#sobre-mi {
+    background-color: var(--cream);
+}
+
+#sobre-mi > p:last-child {
+    max-width: 700px;
+}
+
+#servicios {
+    background-color: var(--parchment);
+}
+
+#portfolio {
+    background-color: var(--cream);
+}
+
+#portfolio > p:last-child {
+    max-width: 700px;
+}
+
+#contacto {
+    background-color: var(--light-pink);
+}
+
+
+/* ==========================================
+   7. TARJETAS DE SERVICIOS
+   ========================================== */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    padding: 25px;
+
+    background-color: var(--white);
+
+    border: 2px solid #c8aa8b;
+    border-radius: 8px;
+
+    box-shadow: 3px 4px 0 #49342612;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px #49342620;
+}
+
+.service-card h3 {
+    margin-bottom: 8px;
+    color: var(--wood);
+}
+
+.service-card p {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   8. THE SECRET GARDEN
+   ========================================== */
+
+.garden-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: min(90%, 1100px);
+
+    margin: 35px auto;
+    padding: 75px 20px;
+
+    text-align: center;
+
+    background-color: var(--sage);
+
+    border: 3px solid var(--olive);
+    border-radius: 12px;
+
+    box-shadow: 5px 7px 0 #49342620;
+}
+
+.garden-entry .eyebrow {
+    color: var(--dark-wood);
+}
+
+.garden-entry h2 {
+    max-width: 650px;
+}
+
+.garden-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 15px;
+
+    color: var(--dark-wood);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Puerta provisional dibujada con CSS */
+
+.door-placeholder {
+    position: relative;
+
+    display: block;
+
+    width: 95px;
+    height: 135px;
+
+    background-color: var(--wood);
+
+    border: 5px solid var(--dark-wood);
+    border-bottom: none;
+    border-radius: 48px 48px 0 0;
+
+    box-shadow:
+        inset 0 0 0 4px var(--parchment),
+        0 4px 0 #49342620;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* Pomo de la puerta */
+
+.door-placeholder::after {
+    content: "";
+
+    position: absolute;
+    top: 70px;
+    right: 13px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background-color: var(--parchment);
+}
+
+/* Efecto hover */
+
+
+/* ==========================================
+   16. PUERTA A THE SECRET GARDEN
+   ========================================== */
+
+.garden-link {
+    gap: 20px;
+    margin-top: 25px;
+    font-size: 1rem;
+}
+
+/* Marco exterior */
+
+.door-placeholder {
+    position: relative;
+    display: block;
+
+    width: 110px;
+    height: 165px;
+
+    background: linear-gradient(
+        90deg,
+        #76533d 0%,
+        #98745c 20%,
+        #a9876b 50%,
+        #98745c 80%,
+        #76533d 100%
+    );
+
+    border: 5px solid var(--dark-wood);
+    border-bottom: none;
+    border-radius: 55px 55px 0 0;
+
+    box-shadow:
+        inset 0 0 0 3px var(--parchment),
+        inset 0 0 0 8px var(--wood),
+        0 0 0 5px #86785b40,
+        0 8px 12px #49342630;
+
+    transform-origin: center bottom;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* Paneles de madera */
+
+.door-placeholder::before {
+    content: "";
+
+    position: absolute;
+    inset: 22px 14px 12px;
+
+    border: 2px solid #49342680;
+    border-radius: 40px 40px 3px 3px;
+
+    box-shadow:
+        inset 0 0 0 4px #ead8bd35,
+        inset 0 -38px 0 -35px var(--dark-wood);
+}
+
+/* Pomo dorado */
+
+.door-placeholder::after {
+    content: "";
+
+    position: absolute;
+    top: 90px;
+    right: 13px;
+
+    width: 9px;
+    height: 9px;
+
+    background-color: #ead8bd;
+    border: 2px solid #86785b;
+    border-radius: 50%;
+
+    box-shadow: 0 0 5px #ead8bd80;
+}
+
+/* La puerta se ilumina al pasar el cursor */
+
+.garden-link:hover .door-placeholder {
+    transform: perspective(500px) rotateY(-8deg) translateY(-4px);
+
+    filter: brightness(1.12);
+
+    box-shadow:
+        inset 0 0 0 3px var(--parchment),
+        inset 0 0 0 8px var(--wood),
+        0 0 18px #ead8bd90,
+        0 10px 18px #49342635;
+}
+
+/* Texto de entrada */
+
+.garden-link > span:last-child {
+    padding: 9px 16px;
+
+    background-color: var(--cream);
+    border: 1px solid var(--wood);
+    border-radius: 5px;
+
+    box-shadow: 3px 4px 0 var(--parchment);
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.garden-link:hover > span:last-child {
+    background-color: var(--light-pink);
+    transform: translateY(-2px);
+}
+
+
+
+/* ==========================================
+   9. PIE DE PÁGINA
+   ========================================== */
+
+.site-footer {
+    padding: 25px;
+
+    color: var(--cream);
+    background-color: var(--dark-wood);
+
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+
+/* ==========================================
+   10. DISEÑO PARA MÓVILES
+   ========================================== */
+
+@media (max-width: 760px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .main-nav {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .main-nav a {
+        padding: 7px 10px;
+    }
+
+    .language-switch {
+        justify-content: center;
+    }
+
+    .library-hero {
+        min-height: auto;
+        padding: 40px 5%;
+    }
+
+    .hero-sign {
+        width: 100%;
+        padding: 25px 30px;
+    }
+
+    .hero-sign::before {
+        left: 8px;
+    }
+
+    .hero-sign::after {
+        right: 8px;
+    }
+
+    .hero-art {
+        width: 95%;
+        padding: 8px;
+    }
+
+    .hero-art img {
+        width: 100%;
+    }
+
+    .content-section {
+        width: 92%;
+        margin: 25px auto;
+        padding: 40px 7%;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .garden-entry {
+        width: 92%;
+        margin: 25px auto;
+        padding: 50px 18px;
+    }
+    
+    .portfolio-grid {
+    grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================
+   11. ACCESIBILIDAD: REDUCIR ANIMACIONES
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================
+   12. TÍTULOS ORNAMENTALES
+   ========================================== */
+
+.content-section h2 {
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+}
+
+.content-section h2::after {
+    content: "──── ୨୧ ────";
+
+    display: block;
+    position: absolute;
+
+    bottom: -10px;
+    left: 50%;
+
+    width: 100%;
+    height: 20px;
+
+    color: var(--wood);
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+
+    transform: translateX(-50%);
+}
+
+/* Título de The Secret Garden */
+
+.garden-entry h2 {
+    margin-bottom: 20px;
+}
+
+/* Transiciones suaves al navegar */
+
+.content-section {
+    scroll-margin-top: 30px;
+    transition: box-shadow 0.25s ease;
+}
+
+.content-section:hover {
+    box-shadow: 6px 9px 0 #49342620;
+}
+
+/* ==========================================
+   13. TARJETAS DEL PORTFOLIO
+   ========================================== */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.portfolio-card {
+    padding: 20px;
+    background-color: var(--white);
+    border: 2px solid var(--wood);
+    border-radius: 8px;
+    box-shadow: 4px 5px 0 var(--parchment);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 8px 0 var(--rose);
+}
+
+.portfolio-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 130px;
+    margin-bottom: 18px;
+    background-color: var(--light-pink);
+    border: 1px dashed var(--wood);
+    border-radius: 5px;
+    color: var(--dark-wood);
+    font-size: 2.5rem;
+}
+
+.portfolio-card h3 {
+    margin-bottom: 8px;
+    color: var(--wood);
+}
+
+.portfolio-card p {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   14. ENLACES DE CONTACTO
+   ========================================== */
+
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    color: var(--dark-wood);
+    background-color: var(--cream);
+    border: 2px solid var(--wood);
+    border-radius: 7px;
+    box-shadow: 3px 4px 0 var(--parchment);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 6px 0 var(--rose);
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    color: var(--cream);
+    background-color: var(--dark-wood);
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 760px) {
+    .contact-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   15. PIE DE PÁGINA DECORATIVO
+   ========================================== */
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    padding: 35px 20px;
+
+    color: var(--cream);
+    background-color: var(--dark-wood);
+
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 4px solid var(--wood);
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.footer-divider {
+    margin: 8px 0;
+    color: var(--rose);
+    font-size: 1.3rem;
+}
+
+.footer-copyright {
+    opacity: 0.8;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 14px;
+
+    color: var(--cream);
+    text-decoration: none;
+
+    border: 1px solid var(--wood);
+    border-radius: 5px;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.back-to-top:hover {
+    color: var(--dark-wood);
+    background-color: var(--parchment);
+}
