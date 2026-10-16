@@ -772,3 +772,318 @@ body:has(.about-portrait-placeholder) #voluntariado {
         transition: none;
     }
 }
+
+/* ==========================================
+   CORRECCIONES PARA LA ESTRUCTURA ALEMANA
+   ========================================== */
+
+/* Cabecera */
+.site-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.language-selector a {
+    padding: 4px 6px;
+    color: var(--cream);
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.language-selector a:hover,
+.language-selector a[aria-current="page"] {
+    color: var(--dark-wood);
+    background-color: var(--parchment);
+}
+
+/* Recuadros principales */
+.about-section {
+    width: min(90%, 1100px);
+    margin: 35px auto;
+    padding: 55px 8%;
+    border: 3px solid var(--wood);
+    border-radius: 10px;
+    box-shadow: 5px 7px 0 #49342620;
+    position: relative;
+    background-color: var(--cream);
+}
+
+#mi-historia,
+#idiomas,
+#mi-filosofia {
+    background-color: var(--cream);
+}
+
+#formacion,
+#intereses,
+#aprendizaje {
+    background-color: var(--parchment);
+}
+
+#contacto,
+#voluntariado {
+    background-color: var(--light-pink);
+}
+
+#herramientas-cat,
+#experiencia,
+#certificados {
+    background-color: var(--cream);
+}
+
+/* Encabezados de las secciones */
+.section-heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-heading h1,
+.section-heading h2 {
+    color: var(--dark-wood);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.section-kicker {
+    margin-bottom: 10px;
+    color: var(--olive);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Texto interior */
+.about-text {
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+
+.about-text ul {
+    padding-left: 25px;
+}
+
+.about-text li {
+    margin-bottom: 8px;
+}
+
+/* Tarjetas de idiomas */
+.language-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin: 32px 0;
+}
+
+/* Nota bajo las tarjetas */
+.section-note {
+    max-width: 850px;
+    margin: 20px auto 0;
+    padding: 15px 18px;
+    color: var(--dark-wood);
+    background-color: var(--parchment);
+    border-left: 4px solid var(--sage);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* Herramientas de traducción */
+.tool-card {
+    margin: 22px 0;
+    padding: 24px;
+    background-color: var(--white);
+    border: 2px solid var(--parchment);
+    border-left: 5px solid var(--sage);
+    border-radius: 8px;
+    box-shadow: 3px 4px 0 #49342612;
+}
+
+.tool-card h3 {
+    color: var(--dark-wood);
+}
+
+/* Certificados */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.certificate-card {
+    padding: 24px;
+    background-color: var(--white);
+    border: 2px solid var(--wood);
+    border-radius: 10px;
+    box-shadow: 4px 5px 0 var(--parchment);
+}
+
+.certificate-card h3 {
+    color: var(--dark-wood);
+    font-size: 1.2rem;
+}
+
+/* Los botones actuales contienen texto, no imágenes */
+.certificate-card .document-preview {
+    display: inline-block;
+    width: auto;
+    aspect-ratio: auto;
+    margin-top: 10px;
+    padding: 10px 16px;
+    color: var(--dark-wood);
+    background-color: var(--light-pink);
+    border: 1px solid var(--wood);
+    border-radius: 5px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.certificate-card .document-preview:hover {
+    background-color: var(--parchment);
+}
+
+/* Ventana de certificados */
+.document-modal:not([open]) {
+    display: none;
+}
+
+.modal-content {
+    position: relative;
+    text-align: center;
+}
+
+#modal-image {
+    display: block;
+    max-width: 100%;
+    max-height: 65vh;
+    margin: 20px auto;
+    object-fit: contain;
+}
+
+#modal-open-full {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 14px;
+    background-color: var(--light-pink);
+    border: 1px solid var(--wood);
+    border-radius: 5px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Voluntariado */
+.volunteer-card {
+    margin: 22px 0;
+    padding: 25px;
+    background-color: var(--white);
+    border: 2px solid var(--parchment);
+    border-radius: 8px;
+    box-shadow: 3px 4px 0 #49342612;
+}
+
+.volunteer-card h3 {
+    color: var(--dark-wood);
+}
+
+.volunteer-date {
+    color: var(--olive);
+    font-weight: bold;
+}
+
+/* Cita */
+.about-text blockquote {
+    margin: 30px auto;
+    padding: 25px;
+    color: var(--dark-wood);
+    background-color: var(--light-pink);
+    border-left: 4px solid var(--rose);
+    border-radius: 0 8px 8px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Contacto */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.contact-links a,
+.volunteer-card a {
+    display: inline-block;
+    padding: 8px 12px;
+    color: var(--dark-wood);
+    background-color: var(--light-pink);
+    border: 1px solid var(--wood);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.contact-links a:hover,
+.volunteer-card a:hover {
+    background-color: var(--parchment);
+}
+
+/* Secret Garden */
+.garden-entry-content {
+    width: min(90%, 900px);
+    margin: 35px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--parchment);
+    border: 3px solid var(--wood);
+    border-radius: 10px;
+}
+
+.garden-entry-content h2 {
+    color: var(--dark-wood);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: normal;
+}
+
+/* Móviles */
+@media (max-width: 760px) {
+    .about-section {
+        width: 92%;
+        margin: 25px auto;
+        padding: 35px 7%;
+    }
+
+    .language-list,
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .garden-entry-content {
+        padding: 28px 20px;
+    }
+}
