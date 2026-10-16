@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f0dc">
+
+    <meta name="description"
+        content="Lerne Elsa kennen, Studentin der Übersetzungswissenschaft und des Dolmetschens, ihren Weg zwischen Sprachen und Kulturen und ihre beruflichen Interessen.">
 
     <title>Über mich | Elsa's Library</title>
 
@@ -12,11 +17,13 @@
 
 <body>
 
-    <!-- HEADER -->
     <header class="site-header">
-        <a href="index.html#inicio" class="logo">Elsa Vázquez</a>
 
-        <nav class="main-nav">
+        <a class="logo" href="index.html#inicio">
+            Elsa Vázquez
+        </a>
+
+        <nav class="main-nav" aria-label="Hauptnavigation">
             <a href="#formacion">Ausbildung</a>
             <a href="#idiomas">Sprachen</a>
             <a href="#herramientas-cat">CAT-Tools</a>
@@ -24,537 +31,770 @@
             <a href="#contacto">Kontakt</a>
         </nav>
 
-        <div class="language-switch">
-            <a href="../esp/sobre-mi.html" lang="es">ES</a>
-            <a href="../cat/sobre-mi.html" lang="ca">CA</a>
-            <a href="../eng/sobre-mi.html" lang="en">EN</a>
-            <a href="../fr/sobre-mi.html" lang="fr">FR</a>
-            <a href="sobre-mi.html" lang="de" aria-current="page">DE</a>
+        <div class="language-switch" aria-label="Sprache auswählen">
+            <a href="sobre-mi.html" aria-current="page">ES</a>
+            <span aria-hidden="true">|</span>
+            <a href="../cat/sobre-mi.html">CA</a>
+            <span aria-hidden="true">|</span>
+            <a href="../eng/sobre-mi.html">EN</a>
+            <span aria-hidden="true">|</span>
+            <a href="../fra/sobre-mi.html">FR</a>
+            <span aria-hidden="true">|</span>
+            <a href="../deu/sobre-mi.html">DE</a>
         </div>
-    </header>
 
+    </header>
 
     <main>
 
-        <!-- HERO -->
-        <section class="library-hero" id="inicio">
+        <section id="inicio" class="library-hero">
 
             <div class="hero-sign">
+
                 <p class="eyebrow">Eine Notiz zwischen den Seiten</p>
-                <h1>Der Mensch hinter den Worten</h1>
+
+                <h1>Die Person hinter den Worten</h1>
 
                 <p class="hero-subtitle">
                     Jede Sprache öffnet eine Tür.
-                    Meine Geschichte handelt davon, sie zu durchschreiten.
+                    Meine Geschichte handelt davon, zu lernen, hindurchzugehen.
                 </p>
+
             </div>
 
-            <div class="hero-art about-portrait-placeholder">
-                <!-- Hier kannst du später dein eigenes Bild einsetzen. -->
+            <div class="hero-art about-portrait-placeholder"
+                 role="img"
+                 aria-label="Platzhalter für ein zukünftiges persönliches Foto oder eine Illustration">
+
+                <div class="portrait-placeholder-content">
+                    <span aria-hidden="true">୨୧</span>
+                    <p>Ein Porträt, das noch entdeckt werden will</p>
+                    <span aria-hidden="true">✧</span>
+                </div>
+
             </div>
 
-            <a href="#mi-historia" class="explore-link">
-                Entdecke meine Geschichte
+            <a class="explore-link" href="#mi-historia">
+                Weiterblättern ↓
             </a>
 
         </section>
 
-
-        <!-- MEINE GESCHICHTE -->
         <section id="mi-historia" class="content-section">
 
-            <div class="section-heading">
-                <p class="eyebrow">Hinter den Seiten</p>
-                <h2>Meine Geschichte</h2>
-            </div>
+            <p class="eyebrow">01 · Die Autorin dieser Bibliothek</p>
 
-            <div class="about-text">
-                <p>
-                    Hallo! Ich bin Elsa, Studentin im Studiengang Übersetzen
-                    und Dolmetschen an der Universitat Autònoma de Barcelona.
-                </p>
+            <h2>Ein bisschen über mich</h2>
 
-                <p>
-                    Mich fasziniert, wie Sprache Menschen, Kulturen und
-                    unterschiedliche Sichtweisen miteinander verbindet.
-                    Für mich bedeutet Übersetzen mehr, als Wörter von einer
-                    Sprache in eine andere zu übertragen: Es geht auch darum,
-                    Bedeutungen, Nuancen und kulturelle Zusammenhänge zu
-                    verstehen und zu vermitteln.
-                </p>
+            <p>
+                Ich bin Elsa und studiere Übersetzen und Dolmetschen
+                an der Universitat Autònoma de Barcelona. Mich interessiert,
+                was passiert, wenn Wörter von einer Sprache in eine andere
+                wandern: welche Nuancen sich verändern, welche kulturellen
+                Bezüge zusätzlichen Kontext benötigen und welche Ideen es
+                verdienen, auch über Sprachgrenzen hinweg verstanden zu werden.
+            </p>
 
-                <p>
-                    Ich interessiere mich besonders für Recherche,
-                    Terminologie und die kleinen sprachlichen Details,
-                    die einen großen Unterschied machen können. Ich lerne
-                    gerne Neues, entdecke verschiedene Perspektiven und
-                    suche immer nach Möglichkeiten, meine sprachlichen
-                    und fachlichen Kenntnisse weiterzuentwickeln.
-                </p>
-            </div>
+            <p>
+                Für mich bedeutet Übersetzen nicht nur, Entsprechungen
+                zwischen Wörtern zu finden. Dazu gehört auch, zu recherchieren,
+                Absichten zu interpretieren, kulturelle Unterschiede zu
+                erkennen und verantwortungsvolle Entscheidungen zu treffen.
+                Manchmal findet die wichtigste Arbeit gerade in dem statt,
+                was nicht ausdrücklich gesagt wird.
+            </p>
+
+            <p>
+                Mein beruflicher Weg nimmt erst allmählich Gestalt an.
+                Diese Bibliothek dokumentiert zum Teil diesen Prozess:
+                was ich lerne, welche Projekte ich entwickle und welche
+                Fragen mir dabei helfen, mich weiterzuentwickeln.
+            </p>
 
         </section>
 
-
-        <!-- AUSBILDUNG -->
         <section id="formacion" class="content-section">
 
-            <div class="section-heading">
-                <p class="eyebrow">Mein akademischer Weg</p>
-                <h2>Ausbildung</h2>
-            </div>
+            <p class="eyebrow">02 · Das Fundament</p>
 
-            <div class="about-text">
+            <h2>Meine Ausbildung</h2>
+
+            <div class="about-highlight">
+
                 <h3>Übersetzen und Dolmetschen</h3>
 
-                <p>
-                    Ich studiere Übersetzen und Dolmetschen an der
-                    Universitat Autònoma de Barcelona. Im Studium beschäftige
-                    ich mich unter anderem mit schriftlicher Übersetzung,
-                    Dolmetschen, Dokumentation, Terminologie und
-                    interkultureller Kommunikation.
+                <p class="about-institution">
+                    Universitat Autònoma de Barcelona
                 </p>
 
                 <p>
-                    Dabei lerne ich, Informationen sorgfältig zu recherchieren,
-                    sprachliche Entscheidungen zu begründen und Texte an
-                    unterschiedliche Zielgruppen und Kommunikationssituationen
-                    anzupassen.
+                    Mein Studium ermöglicht es mir, Sprachen aus verschiedenen
+                    Perspektiven zu betrachten: schriftliche Übersetzung,
+                    Dolmetschen, Recherche, Terminologie und interkulturelle
+                    Kommunikation.
                 </p>
 
                 <p>
-                    Besonders interessieren mich das soziale und institutionelle
-                    Übersetzen sowie das Dolmetschen in öffentlichen,
-                    juristischen, sozialen und internationalen Kontexten.
+                    Besonders interessieren mich die soziale und institutionelle
+                    Übersetzung sowie das Dolmetschen. Dabei möchte ich mich
+                    vor allem mit öffentlichen, juristischen, sozialen und
+                    internationalen Kontexten beschäftigen.
                 </p>
+
             </div>
+
+            <p>
+                Mein Ziel ist es, meine akademische Ausbildung durch praktische
+                Projekte, professionelle Werkzeuge und kontinuierliches Lernen
+                zu ergänzen, damit ich das erworbene Wissen in Kompetenzen
+                umsetzen kann, die sich im Berufsleben anwenden lassen.
+            </p>
 
         </section>
 
-
-        <!-- SPRACHEN -->
         <section id="idiomas" class="content-section">
 
-            <div class="section-heading">
-                <p class="eyebrow">Worte verbinden Welten</p>
-                <h2>Meine Sprachen</h2>
-            </div>
+            <p class="eyebrow">03 · Meine Sprachlandkarte</p>
+
+            <h2>Sprachen, die mich begleiten</h2>
+
+            <p>
+                Jede Sprache eröffnet eine andere Perspektive auf die Welt.
+                Mein sprachlicher Weg verbindet Sprachen, die zu meinem Alltag
+                gehören, mit anderen, die ich weiterhin lerne und vertiefe.
+            </p>
 
             <div class="language-grid">
 
                 <article class="language-card">
+
+                    <span class="language-symbol" aria-hidden="true">
+                        01
+                    </span>
+
                     <h3>Spanisch</h3>
-                    <p>Muttersprache</p>
+
+                    <p class="language-status">
+                        Regelmäßig verwendete Sprache
+                    </p>
+
+                    <p>
+                        Kommunikation und schriftlicher Ausdruck in einer
+                        meiner wichtigsten Arbeitssprachen.
+                    </p>
+
                 </article>
 
                 <article class="language-card">
+
+                    <span class="language-symbol" aria-hidden="true">
+                        02
+                    </span>
+
                     <h3>Katalanisch</h3>
-                    <p>Muttersprache</p>
+
+                    <p class="language-status">
+                        Regelmäßig verwendete Sprache
+                    </p>
+
+                    <p>
+                        Eine zentrale Sprache in meinem akademischen Umfeld
+                        und in meiner Ausbildung zur Übersetzerin.
+                    </p>
+
                 </article>
 
                 <article class="language-card">
+
+                    <span class="language-symbol" aria-hidden="true">
+                        03
+                    </span>
+
                     <h3>Englisch</h3>
-                    <p>Fortgeschrittene Kenntnisse</p>
+
+                    <p class="language-status">
+                        Akademische Ausbildung und Anwendung
+                    </p>
+
+                    <p>
+                        Ein unverzichtbares Werkzeug für die Recherche,
+                        den Zugang zu internationalen Ressourcen und die
+                        Kommunikation zwischen verschiedenen Sprachgemeinschaften.
+                    </p>
+
                 </article>
 
                 <article class="language-card">
+
+                    <span class="language-symbol" aria-hidden="true">
+                        04
+                    </span>
+
                     <h3>Französisch</h3>
-                    <p>Niveau B2</p>
+
+                    <p class="language-status">
+                        Niveau B2
+                    </p>
+
+                    <p>
+                        Ich entwickle meine Sprachkompetenzen weiter, um
+                        Texte präziser und natürlicher verstehen und verfassen
+                        zu können.
+                    </p>
+
                 </article>
 
                 <article class="language-card">
+
+                    <span class="language-symbol" aria-hidden="true">
+                        05
+                    </span>
+
                     <h3>Deutsch</h3>
-                    <p>Anfängerin, etwa A1–A2</p>
+
+                    <p class="language-status">
+                        In Ausbildung · ungefähr A1/A2
+                    </p>
+
+                    <p>
+                        Mein Ziel ist es, die Grundlagen zu festigen,
+                        das Niveau B1 zu erreichen und mich danach
+                        weiterzuentwickeln.
+                    </p>
+
                 </article>
 
             </div>
 
             <p class="about-note">
-                Die angegebenen Niveaus dienen als Orientierung und können
-                sich mit meiner weiteren Ausbildung und Praxis verändern.
+                Die angegebenen Niveaus entsprechen ungefähr meinem
+                derzeitigen Kenntnisstand und stellen nicht unbedingt
+                eine offizielle Zertifizierung dar. Ich möchte meine
+                Kompetenzen weiter verbessern und sie zu gegebener Zeit
+                offiziell nachweisen.
             </p>
 
         </section>
 
-
-        <!-- INTERESSEN -->
         <section id="intereses" class="content-section">
 
-            <div class="section-heading">
-                <p class="eyebrow">Was mich begeistert</p>
-                <h2>Meine Interessen</h2>
-            </div>
+            <p class="eyebrow">04 · Wege, die ich erkunden möchte</p>
 
-            <div class="about-text">
-                <p>Besonders interessieren mich folgende Bereiche:</p>
+            <h2>In welche Richtung ich mich entwickeln möchte</h2>
 
-                <ul>
-                    <li>Soziales und institutionelles Übersetzen</li>
-                    <li>Dolmetschen in unterschiedlichen Kommunikationssituationen</li>
-                    <li>Europäische und internationale Zusammenhänge</li>
-                    <li>Die Verbindung zwischen Sprachen und Technologie</li>
-                    <li>Recherche, Terminologie und interkulturelle Kommunikation</li>
-                </ul>
+            <div class="service-grid">
 
-                <p>
-                    Ich möchte besser verstehen, wie sprachliche Vermittlung
-                    den Zugang zu Informationen erleichtern und die
-                    Kommunikation zwischen Menschen mit unterschiedlichen
-                    sprachlichen und kulturellen Hintergründen unterstützen kann.
-                </p>
-            </div>
+                <article class="service-card">
 
-        </section>
-
-
-        <!-- CAT-TOOLS -->
-        <section id="herramientas-cat" class="content-section">
-
-            <div class="section-heading">
-                <p class="eyebrow">Sprache und Technologie</p>
-                <h2>CAT-Tools</h2>
-            </div>
-
-            <div class="about-text">
-                <p>
-                    Übersetzungstechnologie ist ein wichtiger Bestandteil
-                    der heutigen Übersetzungspraxis. Ich beschäftige mich
-                    mit computergestützten Übersetzungstools, den sogenannten
-                    CAT-Tools, die bei der Organisation von Projekten, der
-                    Verwaltung von Terminologie und der Sicherstellung
-                    sprachlicher Konsistenz helfen.
-                </p>
-
-                <div class="tool-card">
-                    <h3>Smartcat</h3>
+                    <h3>Soziale und institutionelle Übersetzung</h3>
 
                     <p>
-                        Eine cloudbasierte Übersetzungsplattform, die
-                        Übersetzungsprojekte, Translation Memories und
-                        Terminologie in einem gemeinsamen Arbeitsbereich
-                        zusammenführt.
-                    </p>
-                </div>
-
-                <div class="tool-card">
-                    <h3>memoQ</h3>
-
-                    <p>
-                        Ein computergestütztes Übersetzungstool, das unter
-                        anderem die Arbeit mit Translation Memories,
-                        Terminologiedatenbanken und mehrsprachigen Projekten
-                        unterstützt.
-                    </p>
-                </div>
-
-                <p>
-                    Ich möchte meine Kenntnisse in diesen Tools weiter
-                    vertiefen und lernen, sie in professionellen
-                    Übersetzungsprojekten effizient einzusetzen.
-                </p>
-            </div>
-
-        </section>
-
-
-        <!-- ZERTIFIKATE -->
-        <section id="certificados" class="content-section">
-
-            <div class="section-heading">
-                <p class="eyebrow">Weiterlernen</p>
-                <h2>Zertifikate und Kurse</h2>
-            </div>
-
-            <div class="certificates-grid">
-
-                <article class="certificate-card">
-                    <h3>INSIDE LVMH</h3>
-
-                    <p>
-                        Weiterbildung im Bereich Luxusindustrie und
-                        Markenverständnis.
+                        Mich interessiert die Kommunikation zwischen
+                        Institutionen und der Bevölkerung sowie die
+                        Verständlichkeit und Zugänglichkeit von Texten
+                        in öffentlichen Kontexten.
                     </p>
 
-                    <button
-                        type="button"
-                        class="document-preview"
-                        data-image="../documents/INSIDE LVMH/imagen.jpg"
-                        data-title="INSIDE LVMH – Zertifikat"
-                        data-full="../documents/INSIDE LVMH/PDF.pdf">
-
-                        Zertifikat ansehen
-
-                    </button>
                 </article>
 
-                <article class="certificate-card">
-                    <h3>International Organizations for Interpreters</h3>
+                <article class="service-card">
+
+                    <h3>Dolmetschen</h3>
 
                     <p>
-                        Coursera-Kurs über internationale Organisationen
-                        und den Kontext des Dolmetschens.
+                        Ich möchte die Kompetenzen vertiefen, die nötig sind,
+                        um die mündliche Kommunikation zwischen Menschen
+                        zu erleichtern, die unterschiedliche Sprachen sprechen.
                     </p>
 
-                    <button
-                        type="button"
-                        class="document-preview"
-                        data-image="../documents/Coursera/imagen.jpg"
-                        data-title="International Organizations for Interpreters – Zertifikat"
-                        data-full="../documents/Coursera/PDF.pdf">
+                </article>
 
-                        Zertifikat ansehen
+                <article class="service-card">
 
-                    </button>
+                    <h3>Europäische und internationale Kontexte</h3>
+
+                    <p>
+                        Mich reizt die sprachliche Arbeit in multikulturellen
+                        Umgebungen und in Organisationen, die Länder,
+                        Institutionen und Gemeinschaften miteinander verbinden.
+                    </p>
+
+                </article>
+
+                <article class="service-card">
+
+                    <h3>Technologie und Sprachen</h3>
+
+                    <p>
+                        Außerdem möchte ich computergestützte
+                        Übersetzungswerkzeuge, Terminologiemanagement und
+                        die Überprüfung maschineller Übersetzungen erkunden.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="herramientas-cat" class="content-section">
+
+            <p class="eyebrow">05 · Mein digitaler Schreibtisch</p>
+            <h2>Übersetzungswerkzeuge</h2>
+
+            <p>
+                Technologie gehört ebenfalls zur sprachlichen Arbeit.
+                Ich erweitere meine Kenntnisse im Umgang mit
+                computergestützten Übersetzungswerkzeugen,
+                Terminologiemanagement und Textrevision.
+            </p>
+
+            <div class="professional-grid">
+
+                <article class="professional-card">
+                    <span class="professional-label">CAT-TOOL</span>
+                    <h3>Smartcat</h3>
+                    <p>
+                        Computergestützte Übersetzung, Projektmanagement
+                        und kollaborative Übersetzungsumgebungen.
+                    </p>
+                    <p class="professional-status">
+                        Ausbildung und Erfahrung noch zu dokumentieren
+                    </p>
+                    <a href="https://www.smartcat.com/"
+                       target="_blank" rel="noopener noreferrer">
+                        Offizielle Website →
+                    </a>
+                </article>
+
+                <article class="professional-card">
+                    <span class="professional-label">CAT-TOOL</span>
+                    <h3>memoQ</h3>
+                    <p>
+                        Übersetzungsumgebungen, Translation Memories
+                        und Terminologiemanagement.
+                    </p>
+                    <p class="professional-status">
+                        Ausbildung noch zu dokumentieren
+                    </p>
+                    <a href="https://www.memoq.com/"
+                       target="_blank" rel="noopener noreferrer">
+                        Offizielle Website →
+                    </a>
+                </article>
+
+                <article class="professional-card">
+                    <!--
+                    <span class="professional-label">WEITERE WERKZEUGE</span>
+                    <h3>Meine Werkzeugkiste</h3>
+                    <p>
+                        Hier kannst du weitere Werkzeuge für Übersetzung,
+                        Revision, Untertitelung und Qualitätskontrolle ergänzen.
+                    </p>
+                    -->
                 </article>
 
             </div>
 
             <p class="about-note">
-                Ich möchte mein Wissen kontinuierlich erweitern und mich
-                sowohl sprachlich als auch fachlich weiterentwickeln.
+                Die Werkzeuge und meine Erfahrungsstufen werden aktualisiert,
+                sobald ich neue Weiterbildungen abgeschlossen und weitere
+                Projekte durchgeführt habe.
             </p>
 
         </section>
 
+        <section id="certificados" class="content-section">
 
-        <!-- DOKUMENT-VORSCHAU -->
-        <dialog class="document-modal">
+            <p class="eyebrow">06 · Mein akademisches Archiv</p>
 
-            <div class="modal-content">
+            <h2>Zertifikate und ergänzende Weiterbildung</h2>
 
-                <button
-                    type="button"
-                    class="modal-close"
-                    aria-label="Fenster schließen">
-                    &times;
-                </button>
+            <p>
+                Jeder Kurs bietet ein neues Werkzeug für meinen beruflichen
+                Weg. Hier sammle ich die Zertifikate und Lernerfahrungen,
+                die nach und nach in meine Bibliothek aufgenommen werden.
+            </p>
 
+            <div class="document-grid">
+
+                <article class="document-card">
+
+                    <button
+                        class="document-preview"
+                        type="button"
+                        data-image="..\documents\INSIDE LVMH\imagen.jpg"
+                        data-title="INSIDE LVMH Certificate"
+                        aria-label="INSIDE-LVMH-Zertifikat vergrößern">
+
+                        <img
+                            src="..\documents\INSIDE LVMH\imagen.jpg"
+                            alt="Vorschau des INSIDE-LVMH-Zertifikats"
+                            loading="lazy">
+
+                        <span class="preview-overlay">
+                            ⌕ Dokument vergrößern
+                        </span>
+
+                    </button>
+
+                    <div class="document-info">
+
+                        <p class="document-type">Zertifikat</p>
+
+                        <h3>INSIDE LVMH Certificate</h3>
+
+                        <p>
+                            Weiterbildung zu Markenaufbau, Branding und
+                            Geschäftsabläufen in der Luxusbranche.
+                        </p>
+
+                        <a
+                            href="..\documents\INSIDE LVMH\PDF.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="document-link">
+
+                            Vollständiges Dokument ansehen ↗
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="document-card">
+
+                    <button
+                        class="document-preview"
+                        type="button"
+                        data-image="..\documents\Coursera\imagen.jpg"
+                        data-title="International Organizations Coursera"
+                        aria-label="Zertifikat vergrößern">
+
+                        <img
+                            src="..\documents\Coursera\imagen.jpg"
+                            alt="Vorschau des Zertifikats"
+                            loading="lazy">
+
+                        <span class="preview-overlay">
+                            ⌕ Dokument vergrößern
+                        </span>
+
+                    </button>
+
+                    <div class="document-info">
+
+                        <p class="document-type">Zertifizierung</p>
+
+                        <h3>International Organizations for Interpreters</h3>
+
+                        <p>
+                            Weiterbildung zu internationalen Organisationen
+                            aus der Perspektive des Dolmetschens.
+                        </p>
+
+                        <a
+                            href="..\documents\Coursera\PDF.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="document-link">
+
+                            Vollständiges Dokument ansehen ↗
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p class="about-note">
+                Diese Sammlung wird erweitert, sobald ich weitere
+                Weiterbildungen abgeschlossen und neue Zertifikate
+                erworben habe.
+            </p>
+
+        </section>
+
+        <dialog class="document-modal" id="document-modal"
+            aria-labelledby="modal-title">
+
+            <div class="modal-header">
                 <h2 id="modal-title">Dokument</h2>
 
-                <img
-                    id="modal-image"
-                    src=""
-                    alt="Vorschau des Dokuments">
+                <button
+                    class="modal-close"
+                    type="button"
+                    aria-label="Dokument schließen">
+                    ✕
+                </button>
+            </div>
 
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="">
+            </div>
+
+            <div class="modal-footer">
                 <a
                     id="modal-open-full"
-                    href=""
+                    href="#"
                     target="_blank"
-                    rel="noopener noreferrer">
-
-                    Vollständiges Dokument öffnen
-
+                    rel="noopener noreferrer"
+                    class="document-link">
+                    Vollständige Datei öffnen ↗
                 </a>
-
             </div>
 
         </dialog>
 
+        <!--
+        <article class="professional-card">
 
-        <!-- BERUFSERFAHRUNG -->
+            <span class="professional-label">KURS / ZERTIFIZIERUNG</span>
+
+            <h3>Nächste Weiterbildung</h3>
+
+            <p>
+                Ergänze hier den Namen des Kurses, die Institution,
+                das Datum und die erworbenen Kompetenzen.
+            </p>
+
+            <p class="professional-status">
+                Platzhalter
+            </p>
+
+            <a href="#" class="document-link">
+                Dokument ansehen →
+            </a>
+
+        </article>
+        -->
+
         <section id="experiencia" class="content-section">
 
-            <div class="section-heading">
-                <p class="eyebrow">Mein beruflicher Weg</p>
-                <h2>Erfahrung</h2>
-            </div>
+            <p class="eyebrow">07 · Die Arbeit zwischen den Zeilen</p>
+            <h2>Berufserfahrung</h2>
 
-            <div class="about-text">
-                <p>
-                    Ich befinde mich noch am Anfang meines beruflichen Weges
-                    im Bereich Übersetzen und Dolmetschen. Deshalb möchte
-                    ich meine Kenntnisse durch praktische Erfahrungen,
-                    Projekte und kontinuierliches Lernen erweitern.
-                </p>
-
-                <p>
-                    Mein Ziel ist es, Schritt für Schritt ein solides
-                    berufliches Profil aufzubauen und die im Studium
-                    erworbenen Fähigkeiten in realen Projekten anzuwenden.
-                </p>
-            </div>
+            <p>
+                Dieser Bereich soll meine Erfahrungen, Kooperationen
+                und Projekte sammeln, die zu meiner Entwicklung als
+                Sprachmittlerin beitragen.
+            </p>
 
         </section>
 
-
-        <!-- EHRENAMTLICHE MITARBEIT -->
         <section id="voluntariado" class="content-section">
 
-            <div class="section-heading">
-                <p class="eyebrow">Sprache in Aktion</p>
-                <h2>Ehrenamtliche Mitarbeit</h2>
-            </div>
+            <p class="eyebrow">08 · Worte, die verbinden</p>
+            <h2>Ehrenamt und Zusammenarbeit</h2>
 
-            <div class="volunteer-card">
-                <h3>TED Talks Translations</h3>
+            <p>
+                Kommunikation kann auch dazu beitragen, zugänglichere
+                und inklusivere Gemeinschaften zu schaffen. Hier finden
+                die Initiativen und Kooperationen ihren Platz, an denen
+                ich teilnehme.
+            </p>
 
-                <p class="volunteer-date">Seit 2024</p>
+            <div class="professional-grid">
 
-                <p>
-                    Ich wirke an TED-Übersetzungsprojekten mit und sammle
-                    dabei Erfahrungen mit der Übertragung von Ideen und
-                    Wissen für ein internationales Publikum.
-                </p>
+                <article class="professional-card">
 
-                <a
-                    href="https://www.ted.com/users/46988224/profile"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                    <span class="professional-label">EHRENAMT</span>
 
-                    Mein TED-Profil ansehen
+                    <h3>TED Talks Translations</h3>
 
-                </a>
-            </div>
+                    <p>
+                        Ehrenamtliche Mitarbeit bei der Übersetzung
+                        von Untertiteln und der Transkription.
+                    </p>
 
-            <div class="volunteer-card">
-                <h3>World History Encyclopedia</h3>
+                    <p class="professional-status">
+                        2024 bis heute
+                    </p>
 
-                <p class="volunteer-date">Seit 2026</p>
+                    <a href="https://www.ted.com/users/46988224/profile"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="document-link">
 
-                <p>
-                    Ich beteilige mich an sprachbezogenen Projekten im
-                    Umfeld einer Enzyklopädie zur Weltgeschichte und
-                    interessiere mich dafür, historische Informationen
-                    verständlich und zugänglich zu vermitteln.
-                </p>
+                        Profil aufrufen ↗
 
-                <a
-                    href="https://www.worldhistory.org/user/elsavazquez/"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                    </a>
 
-                    Mein Profil ansehen
+                </article>
 
-                </a>
+                <article class="professional-card">
+
+                    <span class="professional-label">EHRENAMT</span>
+
+                    <h3>World History Encyclopedia</h3>
+
+                    <p>
+                        Übersetzung populärwissenschaftlicher Artikel
+                        zur Geschichte.
+                    </p>
+
+                    <p class="professional-status">
+                        2026
+                    </p>
+
+                    <a href="https://www.worldhistory.org/user/elsavazquez/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="document-link">
+
+                        Profil aufrufen ↗
+
+                    </a>
+
+                </article>
+
             </div>
 
         </section>
 
-
-        <!-- MEINE PHILOSOPHIE -->
         <section id="mi-filosofia" class="content-section">
 
-            <div class="section-heading">
-                <p class="eyebrow">Was Sprache für mich bedeutet</p>
-                <h2>Meine Philosophie</h2>
-            </div>
+            <p class="eyebrow">09 · Zwischen den Zeilen</p>
 
-            <div class="about-text">
-                <p>
-                    Für mich ist Übersetzen nicht einfach der Austausch
-                    von Wörtern zwischen zwei Sprachen. Es bedeutet,
-                    eine Botschaft mit ihrer Bedeutung, ihrem Ton und
-                    ihrem kulturellen Hintergrund zu verstehen und
-                    sie für andere Menschen zugänglich zu machen.
-                </p>
+            <h2>Mein Verständnis vom Übersetzen</h2>
 
-                <p>
-                    Jede Sprache eröffnet eine andere Perspektive auf die
-                    Welt. Ich finde es spannend, diese Perspektiven
-                    miteinander zu verbinden, ohne dabei die Besonderheiten
-                    der jeweiligen Sprache und Kultur aus den Augen zu verlieren.
-                </p>
+            <p>
+                Ich glaube an die Bedeutung sorgfältig gewählter Worte,
+                aber auch an die ganze Arbeit, die dahintersteckt:
+                zuverlässige Quellen konsultieren, Fachbegriffe überprüfen,
+                Texte überarbeiten und verstehen, an wen sie sich richten.
+            </p>
 
-                <blockquote class="about-quote">
-                    Übersetzen heißt nicht nur, Worte zu übertragen,
-                    sondern auch, Bedeutungen und Perspektiven zu vermitteln.
-                </blockquote>
-            </div>
+            <p>
+                Ich möchte eine berufliche Praxis aufbauen, die auf
+                Neugier, Präzision, kulturellem Feingefühl und der
+                Bereitschaft zu lernen beruht. Jeder Auftrag hat seine
+                eigenen Anforderungen, und eine gute sprachliche Lösung
+                entsteht nicht dadurch, dass man dieselbe Formel auf
+                alle Texte anwendet.
+            </p>
+
+            <blockquote class="about-quote">
+                Übersetzen bedeutet, eine Brücke zu schlagen zwischen dem,
+                was jemand ausdrücken möchte, und dem, was eine andere
+                Person verstehen muss.
+            </blockquote>
 
         </section>
 
-
-        <!-- WEITERLERNEN -->
         <section id="aprendizaje" class="content-section">
 
-            <div class="section-heading">
-                <p class="eyebrow">Ein Schritt nach dem anderen</p>
-                <h2>Immer weiterlernen</h2>
-            </div>
+            <p class="eyebrow">10 · Noch nicht zu Ende gelesene Bücher</p>
 
-            <div class="about-text">
-                <p>
-                    Ich glaube, dass Lernen ein fortlaufender Prozess ist.
-                    Neue Sprachen, Werkzeuge und Fachgebiete zu entdecken,
-                    hilft mir, meinen Horizont zu erweitern und mich sowohl
-                    persönlich als auch beruflich weiterzuentwickeln.
-                </p>
+            <h2>Es gibt immer etwas Neues zu lernen</h2>
 
-                <p>
-                    Ich möchte neugierig bleiben, aus neuen Erfahrungen
-                    lernen und meine Fähigkeiten mit der Zeit weiter
-                    ausbauen. In der Welt der Sprachen gibt es immer
-                    etwas Neues zu entdecken.
-                </p>
-            </div>
+            <p>
+                Meine berufliche Entwicklung endet nicht im Hörsaal.
+                Ich möchte meine Kenntnisse durch zusätzliche
+                Weiterbildungen, praktische Projekte, Sprachforschung
+                und die Beschäftigung mit branchenspezifischen Werkzeugen
+                kontinuierlich erweitern.
+            </p>
+
+            <p>
+                Dieser Bereich wird mit mir wachsen: Hier finden neue
+                Kompetenzen, relevante Kurse und Projekte ihren Platz,
+                die meinen beruflichen Weg nach und nach prägen.
+            </p>
+
+            <!--
+            <a class="explore-link" href="portfolio.html">
+                Meine Projekte entdecken →
+            </a>
+            -->
 
         </section>
 
-
-        <!-- KONTAKT -->
         <section id="contacto" class="content-section">
 
-            <div class="section-heading">
-                <p class="eyebrow">Lass uns in Kontakt bleiben</p>
-                <h2>Kontakt</h2>
-            </div>
+            <p class="eyebrow">11 · Korrespondenz</p>
 
-            <div class="about-text">
-                <p>
-                    Du möchtest mit mir in Kontakt treten oder mehr über
-                    meine Arbeit und Interessen erfahren? Hier findest du
-                    meine Kontaktdaten.
-                </p>
+            <h2>Setzen wir das Gespräch fort</h2>
 
-                <div class="contact-links">
+            <p>
+                Wenn du dich ebenfalls für Sprachen, interkulturelle
+                Kommunikation oder Sprachprojekte interessierst,
+                freue ich mich darauf, mich mit dir beruflich zu vernetzen.
+            </p>
 
-                    <a href="mailto:elsa.vazquez.carchi@gmail.com">
-                        E-Mail schreiben
-                    </a>
+            <div class="contact-links">
 
-                    <a
-                        href="https://www.linkedin.com/in/emvc2006/"
-                        target="_blank"
-                        rel="noopener noreferrer">
+                <a class="contact-link"
+                   href="mailto:elsa.vazquez.carchi@gmail.com">
 
-                        Mein LinkedIn-Profil
+                    <span class="contact-icon" aria-hidden="true">
+                        ✉
+                    </span>
 
-                    </a>
+                    <span>Schreib mir eine E-Mail</span>
 
-                </div>
+                </a>
+
+                <a class="contact-link"
+                   href="https://www.linkedin.com/in/emvc2006/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <span class="contact-icon" aria-hidden="true">
+                        in
+                    </span>
+
+                    <span>Vernetze dich mit mir auf LinkedIn</span>
+
+                </a>
+
             </div>
 
         </section>
 
-
-        <!-- SECRET GARDEN -->
         <section class="garden-entry">
 
-            <div class="garden-entry-content">
-                <h2>Hinter dem nächsten Tor</h2>
+            <p class="eyebrow">Jede Geschichte geht weiter</p>
 
-                <p>
-                    Jede Bibliothek hat einen verborgenen Ort.
-                    Vielleicht wartet dort schon eine andere Geschichte
-                    darauf, entdeckt zu werden.
-                </p>
+            <h2>Zurück zu den Bücherregalen</h2>
 
-                <!-- Füge hier den funktionierenden Link zum Secret Garden ein. -->
-            </div>
+            <a href="index.html#inicio" class="garden-link">
+
+                <span class="door-placeholder" aria-hidden="true">
+                    ↶
+                </span>
+
+                <span>Zurück zu Elsa's Library →</span>
+
+            </a>
 
         </section>
 
     </main>
 
-
-    <!-- FOOTER -->
     <footer class="site-footer">
-        <p>Elsa's Library</p>
-        <p>&copy; 2026 Elsa Vázquez. Alle Rechte vorbehalten.</p>
+
+        <p class="footer-title">Elsa's Library</p>
+
+        <p>Ein Ort zwischen Worten, Sprachen und Kulturen.</p>
+
+        <div class="footer-divider" aria-hidden="true">
+            ୨୧
+        </div>
+
+        <p class="footer-copyright">
+            © 2026 Elsa · Mit Hingabe gestaltet
+        </p>
+
+        <a class="back-to-top" href="#inicio">
+            Zurück nach oben ↑
+        </a>
+
     </footer>
 
-
     <script src="../js/about.js"></script>
-
 </body>
 </html>
