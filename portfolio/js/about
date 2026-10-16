@@ -1,0 +1,44 @@
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("document-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalImage = document.getElementById("modal-image");
+    const modalOpenFull = document.getElementById("modal-open-full");
+    const closeButton = document.querySelector(".modal-close");
+
+    if (!modal || !modalTitle || !modalImage || !modalOpenFull) {
+        return;
+    }
+
+    document.querySelectorAll(".document-preview").forEach((button) => {
+        button.addEventListener("click", () => {
+            const image = button.dataset.image;
+            const pdf = button.dataset.pdf;
+            const title = button.dataset.title || "Documento";
+
+            if (!image) return;
+
+            modalTitle.textContent = title;
+            modalImage.src = image;
+            modalImage.alt = `Vista ampliada de ${title}`;
+
+            modalOpenFull.href = pdf || image;
+            modal.showModal();
+        });
+    });
+
+    closeButton?.addEventListener("click", () => {
+        modal.close();
+    });
+
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.close();
+        }
+    });
+
+    modal.addEventListener("close", () => {
+        modalImage.src = "";
+        modalImage.alt = "";
+    });
+});
