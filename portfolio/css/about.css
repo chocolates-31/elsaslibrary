@@ -1,0 +1,774 @@
+
+/* ==========================================
+   ELSA'S LIBRARY · SOBRE MÍ
+   Complemento de style.css
+   Mantiene el diseño original de la biblioteca
+   ========================================== */
+
+/* No redefinimos el fondo del body.
+   El tartán rosa y crema procede de style.css. */
+
+
+/* ==========================================
+   1. PORTADA PERSONAL
+   ========================================== */
+
+.about-portrait-placeholder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75%;
+    max-width: 600px;
+    min-height: 320px;
+    margin: 0 auto;
+    padding: 25px;
+
+    background-color: var(--cream);
+
+    border: 2px solid var(--wood);
+    border-radius: 10px;
+
+    box-shadow: 5px 7px 0 #49342620;
+    overflow: hidden;
+}
+
+/* Marco interior decorativo */
+
+.about-portrait-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+
+    border: 1px dashed var(--olive);
+    border-radius: 6px;
+
+    pointer-events: none;
+}
+
+/* Contenido provisional */
+
+.portrait-placeholder-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 300px;
+    text-align: center;
+
+    color: var(--dark-wood);
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+}
+
+.portrait-placeholder-content span {
+    display: block;
+    margin: 8px 0;
+
+    color: var(--rose);
+    font-size: 2rem;
+}
+
+.portrait-placeholder-content p {
+    margin: 12px 0;
+    font-size: 1.1rem;
+}
+
+
+/* ==========================================
+   2. BLOQUE DE FORMACIÓN
+   ========================================== */
+
+.about-highlight {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 28px;
+
+    background-color: var(--white);
+
+    border: 2px solid var(--parchment);
+    border-left: 5px solid var(--sage);
+    border-radius: 8px;
+
+    box-shadow: 3px 4px 0 #49342612;
+}
+
+.about-highlight h3 {
+    margin-top: 0;
+    color: var(--dark-wood);
+    font-size: 1.45rem;
+}
+
+.about-institution {
+    color: var(--olive);
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   3. TARJETAS DE IDIOMAS
+   ========================================== */
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+
+    margin: 32px 0;
+}
+
+.language-card {
+    padding: 25px 22px;
+
+    background-color: var(--white);
+
+    border: 2px solid var(--parchment);
+    border-radius: 8px;
+
+    box-shadow: 3px 4px 0 #49342612;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.language-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 5px 7px 0 #dba2a740;
+}
+
+.language-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+    margin-bottom: 14px;
+
+    color: var(--dark-wood);
+    background-color: var(--light-pink);
+
+    border: 1px solid var(--rose);
+    border-radius: 50%;
+
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.language-card h3 {
+    margin: 0 0 10px;
+
+    color: var(--dark-wood);
+    font-size: 1.35rem;
+}
+
+.language-status {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 6px 10px;
+
+    color: var(--dark-wood);
+    background-color: var(--light-pink);
+
+    border: 1px solid var(--parchment);
+    border-radius: 5px;
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.language-card p:last-child {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.about-note {
+    max-width: 850px;
+    margin: 20px auto 0;
+    padding: 15px 18px;
+
+    color: var(--dark-wood);
+    background-color: var(--parchment);
+
+    border-left: 4px solid var(--sage);
+    border-radius: 5px;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   4. CITA DESTACADA
+   ========================================== */
+
+.about-quote {
+    max-width: 760px;
+    margin: 35px auto;
+    padding: 28px 30px;
+
+    color: var(--dark-wood);
+    background-color: var(--light-pink);
+
+    border-left: 4px solid var(--rose);
+    border-radius: 0 8px 8px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.about-quote::before {
+    content: "“";
+    display: block;
+
+    color: var(--rose);
+    font-size: 3rem;
+    line-height: 1;
+}
+
+
+/* ==========================================
+   5. AJUSTES DE SECCIONES
+   ========================================== */
+
+#mi-historia,
+#formacion,
+#idiomas,
+#intereses,
+#mi-filosofia,
+#aprendizaje,
+#contacto {
+    scroll-margin-top: 110px;
+}
+
+#mi-historia > p:not(.eyebrow),
+#formacion > p:not(.eyebrow),
+#intereses > p:not(.eyebrow),
+#mi-filosofia > p:not(.eyebrow),
+#aprendizaje > p:not(.eyebrow) {
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.9;
+}
+
+
+/* Enlaces de contacto de esta página */
+
+#contacto .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+
+/* ==========================================
+   6. TABLETAS
+   ========================================== */
+
+@media (max-width: 900px) {
+    .language-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==========================================
+   7. MÓVILES
+   ========================================== */
+
+@media (max-width: 760px) {
+    .about-portrait-placeholder {
+        width: 95%;
+        min-height: 240px;
+        padding: 20px;
+    }
+
+    .language-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .language-card {
+        padding: 22px;
+    }
+
+    .about-highlight {
+        padding: 22px;
+    }
+
+    .about-quote {
+        padding: 22px 18px;
+        font-size: 1.05rem;
+    }
+
+    #contacto .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+
+/* ==========================================
+   8. ACCESIBILIDAD
+   ========================================== */
+
+.language-card:focus-within {
+    outline: 2px solid var(--olive);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .language-card {
+        transition: none;
+    }
+
+    .language-card:hover {
+        transform: none;
+    }
+}
+
+
+/* ==========================================
+   ELSA'S LIBRARY · RECUADROS DE TEXTO
+   ========================================== */
+
+/* Recuadros principales de la página Sobre mí */
+
+body:has(.about-portrait-placeholder) .content-section {
+    width: min(90%, 1100px);
+    margin: 35px auto;
+    padding: 55px 8%;
+
+    background-color: #f7f0dc;
+    background-image:
+        linear-gradient(
+            rgba(255, 250, 242, 0.55),
+            rgba(255, 250, 242, 0.55)
+        );
+
+    border: 3px solid #98745c;
+    border-radius: 10px;
+
+    box-shadow:
+        5px 7px 0 rgba(73, 52, 38, 0.12),
+        inset 0 0 0 5px rgba(234, 216, 189, 0.55);
+
+    position: relative;
+}
+
+/* Alternancia de colores como en la biblioteca */
+
+body:has(.about-portrait-placeholder) #mi-historia,
+body:has(.about-portrait-placeholder) #idiomas,
+body:has(.about-portrait-placeholder) #mi-filosofia {
+    background-color: #f7f0dc;
+}
+
+body:has(.about-portrait-placeholder) #formacion,
+body:has(.about-portrait-placeholder) #intereses,
+body:has(.about-portrait-placeholder) #aprendizaje {
+    background-color: #ead8bd;
+}
+
+body:has(.about-portrait-placeholder) #contacto {
+    background-color: #f0d6d4;
+}
+
+/* Títulos de las secciones */
+
+body:has(.about-portrait-placeholder) .content-section h2 {
+    color: #493426;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+/* Texto interior */
+
+body:has(.about-portrait-placeholder) .content-section > p:not(.eyebrow) {
+    line-height: 1.9;
+}
+
+/* Tarjetas interiores */
+
+body:has(.about-portrait-placeholder) .about-highlight,
+body:has(.about-portrait-placeholder) .language-card,
+body:has(.about-portrait-placeholder) .service-card {
+    background-color: #fffaf2;
+    border: 2px solid #c8aa8b;
+    border-radius: 8px;
+    box-shadow: 3px 4px 0 rgba(73, 52, 38, 0.08);
+}
+
+/* Cita destacada */
+
+body:has(.about-portrait-placeholder) .about-quote {
+    background-color: #f0d6d4;
+    border-left: 4px solid #dba2a7;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Retrato con el mismo marco de la biblioteca */
+
+body:has(.about-portrait-placeholder) .about-portrait-placeholder {
+    background-color: #f7f0dc;
+    border: 2px solid #98745c;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 rgba(73, 52, 38, 0.12);
+}
+
+/* Móviles */
+
+@media (max-width: 760px) {
+    body:has(.about-portrait-placeholder) .content-section {
+        width: 92%;
+        margin: 25px auto;
+        padding: 38px 7%;
+    }
+}
+
+
+/* ==========================================
+   ELSA'S LIBRARY · ARCHIVO PROFESIONAL
+   ========================================== */
+
+body:has(.about-portrait-placeholder) .professional-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+body:has(.about-portrait-placeholder) .professional-card {
+    padding: 26px;
+    color: var(--ink, #49382f);
+    background-color: var(--white, #fffaf2);
+    border: 2px solid var(--wood, #98745c);
+    border-radius: 8px;
+    box-shadow: 4px 5px 0 var(--parchment, #ead8bd);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+body:has(.about-portrait-placeholder) .professional-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 7px 0 var(--rose, #dba2a7);
+}
+
+body:has(.about-portrait-placeholder) .professional-card h3 {
+    margin: 12px 0;
+    color: var(--dark-wood, #493426);
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+body:has(.about-portrait-placeholder) .professional-card p {
+    line-height: 1.8;
+}
+
+body:has(.about-portrait-placeholder) .professional-label {
+    display: inline-block;
+    padding: 5px 10px;
+    color: var(--dark-wood, #493426);
+    background-color: var(--light-pink, #f0d6d4);
+    border: 1px solid var(--parchment, #ead8bd);
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+body:has(.about-portrait-placeholder) .professional-status {
+    margin-top: 14px;
+    padding-top: 12px;
+    color: var(--olive, #86785b);
+    border-top: 1px dashed var(--parchment, #ead8bd);
+    font-size: 0.88rem;
+    font-style: italic;
+}
+
+body:has(.about-portrait-placeholder) .professional-institution {
+    color: var(--wood, #98745c);
+    font-style: italic;
+}
+
+body:has(.about-portrait-placeholder) .professional-card a {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--dark-wood, #493426);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rose, #dba2a7);
+}
+
+body:has(.about-portrait-placeholder) .professional-card a:hover {
+    color: var(--olive, #86785b);
+}
+
+body:has(.about-portrait-placeholder) .featured-record {
+    margin-top: 28px;
+    border-left: 5px solid var(--sage, #a4a48a);
+}
+
+body:has(.about-portrait-placeholder) .subsection-title {
+    margin-top: 38px;
+    color: var(--dark-wood, #493426);
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+body:has(.about-portrait-placeholder) #herramientas-cat,
+body:has(.about-portrait-placeholder) #experiencia {
+    background-color: var(--cream, #f7f0dc);
+}
+
+body:has(.about-portrait-placeholder) #formacion-complementaria {
+    background-color: var(--parchment, #ead8bd);
+}
+
+body:has(.about-portrait-placeholder) #voluntariado {
+    background-color: var(--light-pink, #f0d6d4);
+}
+
+@media (max-width: 760px) {
+    body:has(.about-portrait-placeholder) .professional-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body:has(.about-portrait-placeholder) .professional-card {
+        padding: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body:has(.about-portrait-placeholder) .professional-card {
+        transition: none;
+    }
+}
+
+/* ==========================================
+   GALERÍA DE DOCUMENTOS
+   ========================================== */
+
+.document-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.document-card {
+    overflow: hidden;
+    background: var(--white, #fffaf2);
+    border: 2px solid var(--wood, #98745c);
+    border-radius: 10px;
+    box-shadow: 4px 5px 0 var(--parchment, #ead8bd);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.document-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 5px 8px 0 var(--rose, #dba2a7);
+}
+
+.document-preview {
+    position: relative;
+    display: flex;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 12px;
+    border: 0;
+    border-bottom: 1px solid var(--parchment, #ead8bd);
+    background: var(--cream, #f7f0dc);
+    cursor: zoom-in;
+}
+
+.document-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.document-preview:hover img {
+    transform: scale(1.04);
+}
+
+.preview-overlay {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 10px;
+    color: var(--cream, #f7f0dc);
+    background: rgba(73, 52, 38, 0.92);
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.document-preview:hover .preview-overlay,
+.document-preview:focus-visible .preview-overlay {
+    opacity: 1;
+}
+
+.document-info {
+    padding: 20px;
+}
+
+.document-type {
+    margin-bottom: 8px;
+    color: var(--olive, #86785b);
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.document-info h3 {
+    margin-bottom: 10px;
+    color: var(--dark-wood, #493426);
+    font-size: 1.2rem;
+}
+
+.document-info > p:not(.document-type) {
+    font-size: 0.92rem;
+}
+
+.document-link {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 12px;
+    color: var(--dark-wood, #493426);
+    background: var(--light-pink, #f0d6d4);
+    border: 1px solid var(--wood, #98745c);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: background 0.2s ease;
+}
+
+.document-link:hover {
+    background: var(--parchment, #ead8bd);
+}
+
+.document-link:focus-visible,
+.document-preview:focus-visible,
+.modal-close:focus-visible {
+    outline: 3px solid var(--sage, #a4a48a);
+    outline-offset: 3px;
+}
+
+
+/* VENTANA DE AMPLIACIÓN */
+
+.document-modal {
+    width: min(900px, 92vw);
+    max-width: 92vw;
+    max-height: 90vh;
+    padding: 22px;
+    color: var(--ink, #49382f);
+    background: var(--cream, #f7f0dc);
+    border: 3px solid var(--wood, #98745c);
+    border-radius: 12px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.document-modal::backdrop {
+    background: rgba(40, 30, 24, 0.78);
+    backdrop-filter: blur(3px);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: normal;
+}
+
+.modal-close {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    color: var(--cream, #f7f0dc);
+    background: var(--dark-wood, #493426);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    max-height: 65vh;
+    overflow: auto;
+    background: var(--white, #fffaf2);
+    border: 1px solid var(--parchment, #ead8bd);
+    padding: 10px;
+}
+
+.modal-body img {
+    display: block;
+    max-width: 100%;
+    max-height: 62vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+
+/* ADAPTACIÓN RESPONSIVE */
+
+@media (max-width: 900px) {
+    .document-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .document-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-card {
+        max-width: 400px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .document-modal {
+        padding: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .document-card,
+    .document-preview img,
+    .preview-overlay,
+    .document-link {
+        transition: none;
+    }
+}
