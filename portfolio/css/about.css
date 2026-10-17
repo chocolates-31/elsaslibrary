@@ -1087,3 +1087,36 @@ body:has(.about-portrait-placeholder) #voluntariado {
         padding: 28px 20px;
     }
 }
+
+
+/* ===== Correccions per a la versió catalana ===== */
+
+html[lang="ca"] {
+    scroll-behavior: smooth;
+}
+
+html[lang="ca"] body {
+    overflow-x: hidden;
+}
+
+html[lang="ca"] main {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+html[lang="ca"] main section {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html[lang="ca"] h1,
+html[lang="ca"] h2,
+html[lang="ca"] p,
+html[lang="ca"] a {
+    overflow-wrap: break-word;
+}
+
+html[lang="ca"] nav,
+html[lang="ca"] .language-selector {
+    flex-wrap: wrap;
+}
