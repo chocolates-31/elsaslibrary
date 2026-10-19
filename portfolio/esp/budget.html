@@ -1,0 +1,708 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8f0df">
+    <meta name="description" content="Calcula un presupuesto orientativo para los servicios lingüísticos de Elsa's Library.">
+
+    <title>Presupuestos | Elsa's Library</title>
+
+    <link rel="stylesheet" href="../css/services.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <a class="logo" href="index.html">
+            Elsa's Library
+        </a>
+
+        <a class="back-link" href="services.html">
+            ← Volver a servicios
+        </a>
+
+    </header>
+
+
+    <main>
+
+        <!-- INTRODUCCIÓN -->
+
+        <section class="hero">
+
+            <p class="eyebrow">Una estimación para tu proyecto</p>
+
+            <h1>Tu presupuesto</h1>
+
+            <p class="intro">
+                Cada proyecto tiene sus particularidades. Selecciona
+                las características de tu encargo para obtener una
+                estimación inicial y enviarme los detalles por correo.
+            </p>
+
+        </section>
+
+
+        <div class="calculator-list">
+
+
+            <!-- 01. TRADUCCIÓN -->
+
+            <section class="calculator" id="traduccion">
+
+                <p class="eyebrow">01 · Traducción</p>
+
+                <h2>Las palabras viajan</h2>
+
+                <p class="description">
+                    El precio se calcula según el número de palabras,
+                    el tipo de texto y el plazo de entrega.
+                </p>
+
+                <div class="field">
+
+                    <label for="tr-words">
+                        Número de palabras
+                    </label>
+
+                    <input
+                        id="tr-words"
+                        type="number"
+                        min="1"
+                        max="100000"
+                        step="1"
+                        value="500"
+                    >
+
+                </div>
+
+                <div class="field">
+
+                    <label for="tr-type">
+                        Tipo de texto
+                    </label>
+
+                    <select id="tr-type">
+                        <option value="general">General</option>
+                        <option value="specialized">
+                            Especializado (+25 %)
+                        </option>
+                    </select>
+
+                </div>
+
+                <div class="field">
+
+                    <label for="tr-deadline">
+                        Plazo de entrega
+                    </label>
+
+                    <select id="tr-deadline">
+                        <option value="normal">Plazo habitual</option>
+                        <option value="urgent">
+                            Urgente (+25 %)
+                        </option>
+                    </select>
+
+                </div>
+
+                <div class="estimate">
+
+                    <p class="estimate-label">
+                        Presupuesto orientativo
+                    </p>
+
+                    <output
+                        class="price"
+                        id="tr-price"
+                        aria-live="polite"
+                    >
+                        17,50 €
+                    </output>
+
+                    <small>
+                        Tarifa base: 0,035 €/palabra.
+                        Mínimo por encargo: 8 €.
+                    </small>
+
+                </div>
+
+                <a
+                    class="button email-button"
+                    id="tr-email"
+                    href="mailto:elsa.vazquez.carchi@gmail.com"
+                >
+                    Solicitar presupuesto por correo →
+                </a>
+
+            </section>
+
+
+            <!-- 02. CORRECCIÓN -->
+
+            <section class="calculator" id="correccion">
+
+                <p class="eyebrow">02 · Corrección</p>
+
+                <h2>Pulir el texto</h2>
+
+                <p class="description">
+                    Para revisar la ortografía, la gramática y la
+                    claridad de un texto.
+                </p>
+
+                <div class="field">
+
+                    <label for="co-words">
+                        Número de palabras
+                    </label>
+
+                    <input
+                        id="co-words"
+                        type="number"
+                        min="1"
+                        max="100000"
+                        step="1"
+                        value="1000"
+                    >
+
+                </div>
+
+                <div class="field">
+
+                    <label for="co-level">
+                        Tipo de revisión
+                    </label>
+
+                    <select id="co-level">
+                        <option value="basic">
+                            Ortografía y gramática
+                        </option>
+
+                        <option value="style">
+                            Revisión con estilo (+35 %)
+                        </option>
+                    </select>
+
+                </div>
+
+                <div class="estimate">
+
+                    <p class="estimate-label">
+                        Presupuesto orientativo
+                    </p>
+
+                    <output
+                        class="price"
+                        id="co-price"
+                        aria-live="polite"
+                    >
+                        12,00 €
+                    </output>
+
+                    <small>
+                        Tarifa base: 0,012 €/palabra.
+                        Mínimo por encargo: 6 €.
+                    </small>
+
+                </div>
+
+                <a
+                    class="button email-button"
+                    id="co-email"
+                    href="mailto:elsa.vazquez.carchi@gmail.com"
+                >
+                    Solicitar presupuesto por correo →
+                </a>
+
+            </section>
+
+
+            <!-- 03. SUBTITULACIÓN -->
+
+            <section class="calculator" id="subtitulacion">
+
+                <p class="eyebrow">03 · Subtitulación</p>
+
+                <h2>Imagen y palabra</h2>
+
+                <p class="description">
+                    El cálculo depende de la duración del vídeo y
+                    de si necesitas traducción de los subtítulos.
+                </p>
+
+                <div class="field">
+
+                    <label for="su-minutes">
+                        Duración del vídeo (minutos)
+                    </label>
+
+                    <input
+                        id="su-minutes"
+                        type="number"
+                        min="0.5"
+                        max="1000"
+                        step="0.5"
+                        value="5"
+                    >
+
+                </div>
+
+                <div class="field">
+
+                    <label for="su-type">
+                        Tipo de subtitulación
+                    </label>
+
+                    <select id="su-type">
+                        <option value="original">
+                            Subtítulos en el idioma original
+                        </option>
+
+                        <option value="translated">
+                            Subtítulos traducidos
+                        </option>
+                    </select>
+
+                </div>
+
+                <div class="estimate">
+
+                    <p class="estimate-label">
+                        Presupuesto orientativo
+                    </p>
+
+                    <output
+                        class="price"
+                        id="su-price"
+                        aria-live="polite"
+                    >
+                        15,00 €
+                    </output>
+
+                    <small>
+                        Desde 3 €/minuto en el idioma original o
+                        4,50 €/minuto si requiere traducción.
+                        Mínimo por encargo: 10 €.
+                    </small>
+
+                </div>
+
+                <a
+                    class="button email-button"
+                    id="su-email"
+                    href="mailto:elsa.vazquez.carchi@gmail.com"
+                >
+                    Solicitar presupuesto por correo →
+                </a>
+
+            </section>
+
+
+            <!-- 04. TRANSCRIPCIÓN -->
+
+            <section class="calculator" id="transcripcion">
+
+                <p class="eyebrow">04 · Transcripción</p>
+
+                <h2>Escuchar y escribir</h2>
+
+                <p class="description">
+                    Para convertir audios en texto escrito con
+                    especial atención a la precisión.
+                </p>
+
+                <div class="field">
+
+                    <label for="ts-minutes">
+                        Duración del audio (minutos)
+                    </label>
+
+                    <input
+                        id="ts-minutes"
+                        type="number"
+                        min="0.5"
+                        max="1000"
+                        step="0.5"
+                        value="10"
+                    >
+
+                </div>
+
+                <div class="field">
+
+                    <label for="ts-quality">
+                        Calidad del audio
+                    </label>
+
+                    <select id="ts-quality">
+                        <option value="clear">Audio claro</option>
+
+                        <option value="difficult">
+                            Audio difícil (+40 %)
+                        </option>
+                    </select>
+
+                </div>
+
+                <label class="check-field">
+
+                    <input
+                        id="ts-timestamps"
+                        type="checkbox"
+                    >
+
+                    <span>
+                        Incluir marcas de tiempo (+20 %)
+                    </span>
+
+                </label>
+
+                <div class="estimate">
+
+                    <p class="estimate-label">
+                        Presupuesto orientativo
+                    </p>
+
+                    <output
+                        class="price"
+                        id="ts-price"
+                        aria-live="polite"
+                    >
+                        15,00 €
+                    </output>
+
+                    <small>
+                        Tarifa base: 1,50 €/minuto.
+                        Mínimo por encargo: 8 €.
+                    </small>
+
+                </div>
+
+                <a
+                    class="button email-button"
+                    id="ts-email"
+                    href="mailto:elsa.vazquez.carchi@gmail.com"
+                >
+                    Solicitar presupuesto por correo →
+                </a>
+
+            </section>
+
+        </div>
+
+
+        <!-- INFORMACIÓN FINAL -->
+
+        <section class="closing">
+
+            <p class="eyebrow">Una pequeña nota</p>
+
+            <h2>Un presupuesto a tu medida</h2>
+
+            <p>
+                Estas cantidades son estimaciones iniciales, no un
+                presupuesto definitivo. El precio final dependerá
+                del material, la combinación lingüística, la dificultad
+                y el plazo de entrega.
+            </p>
+
+            <p>
+                Revisaré los detalles antes de confirmar cualquier encargo.
+            </p>
+
+            <a class="button button-outline" href="services.html">
+                Volver a los servicios
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p class="footer-title">
+            Elsa's Library
+        </p>
+
+        <p>
+            Un espacio entre palabras, lenguas y culturas.
+        </p>
+
+        <div class="footer-divider" aria-hidden="true">
+            ୨୧
+        </div>
+
+        <p class="footer-copyright">
+            © 2026 Elsa · Hecho con dedicación
+        </p>
+
+    </footer>
+
+
+    <!-- CALCULADORAS Y CORREOS PERSONALIZADOS -->
+
+    <script>
+        const EMAIL = "elsa.vazquez.carchi@gmail.com";
+
+        const euro = value =>
+            value.toLocaleString("es-ES", {
+                style: "currency",
+                currency: "EUR"
+            });
+
+        function numberValue(id) {
+            const field = document.getElementById(id);
+            const value = Number(field.value);
+            const min = Number(field.min) || 0;
+            const max = Number(field.max) || 100000;
+
+            if (!Number.isFinite(value)) {
+                return min;
+            }
+
+            return Math.min(max, Math.max(min, value));
+        }
+
+        function updateEstimate(config) {
+            const details = config.getDetails();
+
+            const amount = Math.max(
+                config.minimum,
+                config.calculate()
+            );
+
+            document.getElementById(config.output).textContent =
+                euro(amount);
+
+            const subject =
+                "Solicitud de presupuesto | " + config.name;
+
+            const body = [
+                "Hola, Elsa:",
+                "",
+                "Me gustaría solicitar información sobre el servicio de " +
+                    config.name.toLowerCase() + ".",
+                "",
+                "Detalles del encargo:",
+                ...details.map(
+                    ([label, value]) => label + ": " + value
+                ),
+                "",
+                "Estimación calculada: " + euro(amount),
+                "",
+                "Entiendo que el importe es orientativo y que el presupuesto " +
+                    "final dependerá de la revisión del material.",
+                "",
+                "¡Gracias!"
+            ].join("\n");
+
+            const link = document.getElementById(config.link);
+
+            link.href =
+                "mailto:" + EMAIL +
+                "?subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+        }
+
+        const configs = [
+
+            {
+                name: "Traducción",
+                output: "tr-price",
+                link: "tr-email",
+                minimum: 8,
+
+                getDetails: () => [
+                    [
+                        "Número de palabras",
+                        numberValue("tr-words")
+                    ],
+                    [
+                        "Tipo de texto",
+                        document.getElementById("tr-type")
+                            .selectedOptions[0].text
+                    ],
+                    [
+                        "Plazo",
+                        document.getElementById("tr-deadline")
+                            .selectedOptions[0].text
+                    ]
+                ],
+
+                calculate: () => {
+                    let total = numberValue("tr-words") * 0.035;
+
+                    if (
+                        document.getElementById("tr-type").value
+                        === "specialized"
+                    ) {
+                        total *= 1.25;
+                    }
+
+                    if (
+                        document.getElementById("tr-deadline").value
+                        === "urgent"
+                    ) {
+                        total *= 1.25;
+                    }
+
+                    return total;
+                },
+
+                inputs: [
+                    "tr-words",
+                    "tr-type",
+                    "tr-deadline"
+                ]
+            },
+
+            {
+                name: "Corrección",
+                output: "co-price",
+                link: "co-email",
+                minimum: 6,
+
+                getDetails: () => [
+                    [
+                        "Número de palabras",
+                        numberValue("co-words")
+                    ],
+                    [
+                        "Tipo de revisión",
+                        document.getElementById("co-level")
+                            .selectedOptions[0].text
+                    ]
+                ],
+
+                calculate: () => {
+                    let total = numberValue("co-words") * 0.012;
+
+                    if (
+                        document.getElementById("co-level").value
+                        === "style"
+                    ) {
+                        total *= 1.35;
+                    }
+
+                    return total;
+                },
+
+                inputs: [
+                    "co-words",
+                    "co-level"
+                ]
+            },
+
+            {
+                name: "Subtitulación",
+                output: "su-price",
+                link: "su-email",
+                minimum: 10,
+
+                getDetails: () => [
+                    [
+                        "Duración del vídeo (minutos)",
+                        numberValue("su-minutes")
+                    ],
+                    [
+                        "Tipo de subtitulación",
+                        document.getElementById("su-type")
+                            .selectedOptions[0].text
+                    ]
+                ],
+
+                calculate: () => {
+                    const rate =
+                        document.getElementById("su-type").value
+                        === "translated"
+                            ? 4.5
+                            : 3;
+
+                    return numberValue("su-minutes") * rate;
+                },
+
+                inputs: [
+                    "su-minutes",
+                    "su-type"
+                ]
+            },
+
+            {
+                name: "Transcripción",
+                output: "ts-price",
+                link: "ts-email",
+                minimum: 8,
+
+                getDetails: () => [
+                    [
+                        "Duración del audio (minutos)",
+                        numberValue("ts-minutes")
+                    ],
+                    [
+                        "Calidad del audio",
+                        document.getElementById("ts-quality")
+                            .selectedOptions[0].text
+                    ],
+                    [
+                        "Marcas de tiempo",
+                        document.getElementById("ts-timestamps").checked
+                            ? "Sí"
+                            : "No"
+                    ]
+                ],
+
+                calculate: () => {
+                    let total = numberValue("ts-minutes") * 1.5;
+
+                    if (
+                        document.getElementById("ts-quality").value
+                        === "difficult"
+                    ) {
+                        total *= 1.4;
+                    }
+
+                    if (
+                        document.getElementById("ts-timestamps").checked
+                    ) {
+                        total *= 1.2;
+                    }
+
+                    return total;
+                },
+
+                inputs: [
+                    "ts-minutes",
+                    "ts-quality",
+                    "ts-timestamps"
+                ]
+            }
+
+        ];
+
+        configs.forEach(config => {
+
+            config.inputs.forEach(id => {
+                const input = document.getElementById(id);
+
+                input.addEventListener("input", () => {
+                    updateEstimate(config);
+                });
+
+                input.addEventListener("change", () => {
+                    updateEstimate(config);
+                });
+            });
+
+            updateEstimate(config);
+
+        });
+    </script>
+
+</body>
+</html>
