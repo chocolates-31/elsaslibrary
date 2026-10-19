@@ -22,19 +22,57 @@ body {
     margin: 0;
     color: var(--chocolate);
     background-color: var(--vanilla);
+
+    /*
+       TARTÁN VANILLA-CHOCOLATE
+       Franjas anchas, cruces translúcidas e hilos finos.
+    */
     background-image:
+        /* Hilos horizontales */
         repeating-linear-gradient(
             0deg,
-            transparent 0 38px,
-            rgba(112, 72, 47, .045) 38px 40px,
-            transparent 40px 78px
+            transparent 0 5px,
+            rgba(56, 37, 29, 0.035) 5px 6px
         ),
+
+        /* Hilos verticales */
         repeating-linear-gradient(
             90deg,
-            transparent 0 38px,
-            rgba(112, 72, 47, .045) 38px 40px,
-            transparent 40px 78px
+            transparent 0 5px,
+            rgba(56, 37, 29, 0.035) 5px 6px
+        ),
+
+        /* Franjas horizontales de chocolate, latte y vainilla */
+        repeating-linear-gradient(
+            0deg,
+            transparent 0 30px,
+            rgba(56, 37, 29, 0.78) 30px 35px,
+            rgba(112, 72, 47, 0.62) 35px 43px,
+            rgba(185, 155, 120, 0.68) 43px 48px,
+            rgba(255, 250, 240, 0.9) 48px 53px,
+            rgba(231, 213, 182, 0.72) 53px 65px,
+            transparent 65px 83px,
+            rgba(112, 72, 47, 0.3) 83px 87px,
+            transparent 87px 112px
+        ),
+
+        /* Franjas verticales de chocolate, latte y vainilla */
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 30px,
+            rgba(56, 37, 29, 0.78) 30px 35px,
+            rgba(112, 72, 47, 0.62) 35px 43px,
+            rgba(185, 155, 120, 0.68) 43px 48px,
+            rgba(255, 250, 240, 0.9) 48px 53px,
+            rgba(231, 213, 182, 0.72) 53px 65px,
+            transparent 65px 83px,
+            rgba(112, 72, 47, 0.3) 83px 87px,
+            transparent 87px 112px
         );
+
+    background-attachment: fixed;
+    background-size: 6px 6px, 6px 6px, 112px 112px, 112px 112px;
+
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.7;
 }
@@ -44,13 +82,15 @@ a {
 }
 
 .topbar {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     padding: 20px 7%;
     border-bottom: 1px solid var(--border);
-    background: rgba(248, 240, 223, .96);
+    background: rgba(248, 240, 223, 0.97);
 }
 
 .logo {
@@ -60,7 +100,7 @@ a {
 }
 
 .back-link {
-    font-size: .9rem;
+    font-size: 0.9rem;
     text-decoration: none;
 }
 
@@ -77,13 +117,15 @@ a {
 
 .eyebrow {
     color: var(--cocoa);
-    font-size: .78rem;
+    font-size: 0.78rem;
     font-weight: bold;
-    letter-spacing: .16em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     line-height: 1.2;
     font-weight: normal;
 }
@@ -130,14 +172,19 @@ h2 {
     padding: 30px;
     border: 1px solid var(--border);
     border-radius: 5px;
-    background: rgba(255, 250, 240, .96);
-    box-shadow: 5px 5px 0 rgba(112, 72, 47, .07);
+
+    /* Superficie cremosa para que el texto se lea sobre el tartán */
+    background: rgba(255, 250, 240, 0.96);
+
+    box-shadow:
+        5px 5px 0 rgba(112, 72, 47, 0.09),
+        0 8px 24px rgba(56, 37, 29, 0.04);
 }
 
 .service-number {
-    color: var(--latte);
-    font-size: .85rem;
-    letter-spacing: .12em;
+    color: var(--cocoa);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
 }
 
 .service-card h3 {
@@ -156,7 +203,7 @@ h2 {
 .price-note,
 .description {
     color: var(--cocoa);
-    font-size: .95rem;
+    font-size: 0.95rem;
 }
 
 .price-note {
@@ -167,6 +214,7 @@ h2 {
 
 .button {
     display: inline-block;
+    max-width: 100%;
     padding: 12px 20px;
     border: 1px solid var(--chocolate);
     border-radius: 3px;
@@ -175,13 +223,21 @@ h2 {
     font: inherit;
     text-align: center;
     text-decoration: none;
+    overflow-wrap: anywhere;
     cursor: pointer;
-    transition: background .2s, color .2s;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .button:hover {
     background: var(--cream);
     color: var(--chocolate);
+}
+
+.button:active {
+    transform: translateY(1px);
 }
 
 .button-outline {
@@ -194,7 +250,7 @@ h2 {
     margin: 0 auto 70px;
     padding: 35px 25px;
     border: 1px solid var(--border);
-    background: var(--biscuit);
+    background: rgba(231, 213, 182, 0.97);
     text-align: center;
 }
 
@@ -215,8 +271,8 @@ h2 {
 }
 
 .field label {
+    font-size: 0.95rem;
     font-weight: bold;
-    font-size: .95rem;
 }
 
 input[type="number"],
@@ -231,23 +287,16 @@ select {
     font: inherit;
 }
 
-input:focus,
-select:focus,
-a:focus-visible,
-button:focus-visible {
-    outline: 2px solid var(--cocoa);
-    outline-offset: 3px;
-}
-
 .check-field {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     margin: 18px 0;
-    font-size: .95rem;
+    font-size: 0.95rem;
 }
 
 .check-field input {
+    flex: 0 0 auto;
     width: 18px;
     height: 18px;
     margin-top: 4px;
@@ -258,12 +307,13 @@ button:focus-visible {
     margin: 25px 0 18px;
     padding: 20px;
     border: 1px solid var(--border);
-    background: var(--biscuit);
+    border-radius: 3px;
+    background: rgba(231, 213, 182, 0.85);
 }
 
 .estimate-label {
     margin: 0;
-    font-size: .85rem;
+    font-size: 0.85rem;
 }
 
 .price {
@@ -271,35 +321,68 @@ button:focus-visible {
     margin: 5px 0;
     font-size: 2rem;
     font-weight: bold;
+    overflow-wrap: anywhere;
 }
 
 .estimate small {
     display: block;
+    line-height: 1.6;
 }
 
 .fine-print {
     margin-top: 14px;
     color: #6b5545;
-    font-size: .83rem;
+    font-size: 0.83rem;
 }
 
 footer {
     padding: 25px;
     border-top: 1px solid var(--border);
-    background: var(--cream);
+    background: rgba(255, 250, 240, 0.97);
     text-align: center;
-    font-size: .85rem;
+    font-size: 0.85rem;
+}
+
+.footer-title {
+    font-weight: bold;
+}
+
+.footer-divider {
+    color: var(--cocoa);
+}
+
+.footer-copyright {
+    color: var(--cocoa);
+}
+
+input:focus-visible,
+select:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--cocoa);
+    outline-offset: 3px;
 }
 
 @media (max-width: 650px) {
+    body {
+        background-attachment: scroll;
+    }
+
     .topbar {
         align-items: flex-start;
         flex-direction: column;
+        gap: 8px;
         padding: 17px 6%;
     }
 
     .hero {
-        padding-top: 50px;
+        padding: 50px 20px 40px;
+    }
+
+    .services,
+    .calculator-list {
+        padding-right: 18px;
+        padding-left: 18px;
     }
 
     .service-grid {
@@ -312,6 +395,24 @@ footer {
     }
 
     .button {
-        max-width: 100%;
+        width: 100%;
+    }
+
+    .closing {
+        margin-right: 18px;
+        margin-left: 18px;
+        padding: 28px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
     }
 }
