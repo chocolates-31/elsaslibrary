@@ -6,7 +6,7 @@
     --latte: #b99b78;
     --cocoa: #70482f;
     --chocolate: #38251d;
-    --border: #d9c5a5;
+    --border: #c9ae88;
 }
 
 * {
@@ -21,60 +21,47 @@ html {
 body {
     margin: 0;
     color: var(--chocolate);
-    background-color: var(--vanilla);
-
-    /*
-       TARTÁN VANILLA-CHOCOLATE
-       Franjas anchas, cruces translúcidas e hilos finos.
-    */
-    background-image:
-        /* Hilos horizontales */
-        repeating-linear-gradient(
-            0deg,
-            transparent 0 5px,
-            rgba(56, 37, 29, 0.035) 5px 6px
-        ),
-
-        /* Hilos verticales */
-        repeating-linear-gradient(
-            90deg,
-            transparent 0 5px,
-            rgba(56, 37, 29, 0.035) 5px 6px
-        ),
-
-        /* Franjas horizontales de chocolate, latte y vainilla */
-        repeating-linear-gradient(
-            0deg,
-            transparent 0 30px,
-            rgba(56, 37, 29, 0.78) 30px 35px,
-            rgba(112, 72, 47, 0.62) 35px 43px,
-            rgba(185, 155, 120, 0.68) 43px 48px,
-            rgba(255, 250, 240, 0.9) 48px 53px,
-            rgba(231, 213, 182, 0.72) 53px 65px,
-            transparent 65px 83px,
-            rgba(112, 72, 47, 0.3) 83px 87px,
-            transparent 87px 112px
-        ),
-
-        /* Franjas verticales de chocolate, latte y vainilla */
-        repeating-linear-gradient(
-            90deg,
-            transparent 0 30px,
-            rgba(56, 37, 29, 0.78) 30px 35px,
-            rgba(112, 72, 47, 0.62) 35px 43px,
-            rgba(185, 155, 120, 0.68) 43px 48px,
-            rgba(255, 250, 240, 0.9) 48px 53px,
-            rgba(231, 213, 182, 0.72) 53px 65px,
-            transparent 65px 83px,
-            rgba(112, 72, 47, 0.3) 83px 87px,
-            transparent 87px 112px
-        );
-
-    background-attachment: fixed;
-    background-size: 6px 6px, 6px 6px, 112px 112px, 112px 112px;
-
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.7;
+    background-color: var(--vanilla);
+
+    /* Tartán vanilla-chocolate */
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0 3px,
+            rgba(56, 37, 29, 0.12) 3px 4px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 3px,
+            rgba(56, 37, 29, 0.12) 3px 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent 0 24px,
+            #70482f 24px 31px,
+            #b99b78 31px 38px,
+            #fffaf0 38px 44px,
+            #e7d5b6 44px 55px,
+            transparent 55px 82px,
+            rgba(56, 37, 29, 0.65) 82px 86px,
+            transparent 86px 110px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 24px,
+            #70482f 24px 31px,
+            #b99b78 31px 38px,
+            #fffaf0 38px 44px,
+            #e7d5b6 44px 55px,
+            transparent 55px 82px,
+            rgba(56, 37, 29, 0.65) 82px 86px,
+            transparent 86px 110px
+        );
+
+    background-size: 4px 4px, 4px 4px, 110px 110px, 110px 110px;
+    background-attachment: fixed;
 }
 
 a {
@@ -89,8 +76,8 @@ a {
     align-items: center;
     gap: 20px;
     padding: 20px 7%;
-    border-bottom: 1px solid var(--border);
-    background: rgba(248, 240, 223, 0.97);
+    border-bottom: 2px solid var(--border);
+    background: var(--cream);
 }
 
 .logo {
@@ -109,10 +96,13 @@ a {
 }
 
 .hero {
-    max-width: 900px;
-    margin: auto;
-    padding: 75px 24px 55px;
+    max-width: 850px;
+    margin: 55px auto 45px;
+    padding: 45px 35px;
     text-align: center;
+    background: var(--cream);
+    border: 2px solid var(--border);
+    box-shadow: 7px 7px 0 rgba(56, 37, 29, 0.2);
 }
 
 .eyebrow {
@@ -157,8 +147,13 @@ h2 {
 }
 
 .section-heading {
-    margin-bottom: 35px;
+    max-width: 760px;
+    margin: 0 auto 35px;
+    padding: 25px;
     text-align: center;
+    background: var(--cream);
+    border: 2px solid var(--border);
+    box-shadow: 5px 5px 0 rgba(56, 37, 29, 0.12);
 }
 
 .service-grid {
@@ -169,16 +164,12 @@ h2 {
 
 .service-card,
 .calculator {
+    min-width: 0;
     padding: 30px;
-    border: 1px solid var(--border);
-    border-radius: 5px;
-
-    /* Superficie cremosa para que el texto se lea sobre el tartán */
-    background: rgba(255, 250, 240, 0.96);
-
-    box-shadow:
-        5px 5px 0 rgba(112, 72, 47, 0.09),
-        0 8px 24px rgba(56, 37, 29, 0.04);
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    background: var(--cream);
+    box-shadow: 6px 6px 0 rgba(56, 37, 29, 0.18);
 }
 
 .service-number {
@@ -190,6 +181,14 @@ h2 {
 .service-card h3 {
     margin: 8px 0 12px;
     font-size: 1.8rem;
+}
+
+.service-card p,
+.service-card li,
+.calculator p,
+.calculator small,
+.calculator label {
+    color: var(--chocolate);
 }
 
 .service-card ul {
@@ -225,10 +224,7 @@ h2 {
     text-decoration: none;
     overflow-wrap: anywhere;
     cursor: pointer;
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        transform 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .button:hover {
@@ -241,7 +237,7 @@ h2 {
 }
 
 .button-outline {
-    background: transparent;
+    background: var(--cream);
     color: var(--chocolate);
 }
 
@@ -249,9 +245,10 @@ h2 {
     max-width: 800px;
     margin: 0 auto 70px;
     padding: 35px 25px;
-    border: 1px solid var(--border);
-    background: rgba(231, 213, 182, 0.97);
+    border: 2px solid var(--border);
+    background: var(--cream);
     text-align: center;
+    box-shadow: 6px 6px 0 rgba(56, 37, 29, 0.15);
 }
 
 .calculator-list {
@@ -306,9 +303,9 @@ select {
 .estimate {
     margin: 25px 0 18px;
     padding: 20px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--latte);
     border-radius: 3px;
-    background: rgba(231, 213, 182, 0.85);
+    background: var(--biscuit);
 }
 
 .estimate-label {
@@ -331,14 +328,14 @@ select {
 
 .fine-print {
     margin-top: 14px;
-    color: #6b5545;
+    color: #594333;
     font-size: 0.83rem;
 }
 
 footer {
     padding: 25px;
-    border-top: 1px solid var(--border);
-    background: rgba(255, 250, 240, 0.97);
+    border-top: 2px solid var(--border);
+    background: var(--cream);
     text-align: center;
     font-size: 0.85rem;
 }
@@ -347,10 +344,7 @@ footer {
     font-weight: bold;
 }
 
-.footer-divider {
-    color: var(--cocoa);
-}
-
+.footer-divider,
 .footer-copyright {
     color: var(--cocoa);
 }
@@ -376,13 +370,18 @@ button:focus-visible {
     }
 
     .hero {
-        padding: 50px 20px 40px;
+        margin: 30px 16px;
+        padding: 30px 20px;
     }
 
     .services,
     .calculator-list {
         padding-right: 18px;
         padding-left: 18px;
+    }
+
+    .section-heading {
+        padding: 20px 16px;
     }
 
     .service-grid {
@@ -414,77 +413,5 @@ button:focus-visible {
     *::before,
     *::after {
         transition-duration: 0.01ms !important;
-    }
-}
-
-
-/* =====================================
-   RECUADROS PARA MEJORAR LA LEGIBILIDAD
-   ===================================== */
-
-/* Introducción */
-.hero {
-    max-width: 850px;
-    margin: 55px auto 45px;
-    padding: 45px 35px;
-    background: rgba(255, 250, 240, 0.97);
-    border: 1px solid var(--border);
-    box-shadow: 6px 6px 0 rgba(56, 37, 29, 0.12);
-}
-
-/* Títulos de sección */
-.section-heading {
-    max-width: 760px;
-    margin: 0 auto 35px;
-    padding: 25px;
-    background: rgba(255, 250, 240, 0.97);
-    border: 1px solid var(--border);
-}
-
-/* Tarjetas de servicios y calculadoras */
-.service-card,
-.calculator {
-    background: #fffaf0;
-    border: 2px solid var(--border);
-    box-shadow: 6px 6px 0 rgba(56, 37, 29, 0.14);
-}
-
-/* Recuadros interiores de los precios */
-.estimate {
-    background: #e7d5b6;
-    border: 1px solid #b99b78;
-}
-
-/* Texto descriptivo con contraste suficiente */
-.service-card p,
-.service-card li,
-.calculator p,
-.calculator small,
-.calculator label {
-    color: #38251d;
-}
-
-/* Bloque final de contacto */
-.closing {
-    background: #fffaf0;
-    border: 2px solid var(--border);
-    box-shadow: 6px 6px 0 rgba(56, 37, 29, 0.12);
-}
-
-/* Navegación y pie de página */
-.topbar,
-footer {
-    background: #fffaf0;
-}
-
-/* Espaciado para móviles */
-@media (max-width: 650px) {
-    .hero {
-        margin: 30px 16px;
-        padding: 30px 20px;
-    }
-
-    .section-heading {
-        padding: 20px 16px;
     }
 }
