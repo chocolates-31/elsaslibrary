@@ -547,12 +547,12 @@ button:focus-visible {
 }
 
 .closing h2::before {
-    content: "❦  ";
+    content: "｡𖦹°‧  ";
     color: var(--latte);
 }
 
 .closing h2::after {
-    content: "  ❦";
+    content: "  ‧°𖦹｡";
     color: var(--latte);
 }
 
